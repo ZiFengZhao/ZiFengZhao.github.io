@@ -40,11 +40,11 @@
 <meta property="og:title" content="Topology Comparison">
 <meta property="og:url" content="https://zifengzhao.github.io/2022/10/25/Lab2_report/index.html">
 <meta property="og:site_name" content="KimFang&#39;s Blog">
-<meta property="og:description" content="Lab2: Topology Comparison1. 实验目的本实验比较了三种拓扑结构（Mesh; Flattened-Butterfly; hierarchical ring) 对NoC性能的影响。 2. 实验原理2.1 Flattened Butterfly该拓扑结构是John Kim和James Balfour在2007年提出的Butterfly改进结构。该结构最突出的特点是高阶数(hig">
+<meta property="og:description" content="1. 实验目的本实验比较了三种拓扑结构（Mesh; Flattened-Butterfly; hierarchical ring) 对NoC性能的影响。 2. 实验原理2.1 Flattened Butterfly该拓扑结构是John Kim和James Balfour在2007年提出的Butterfly改进结构。该结构最突出的特点是高阶数(high-radix)。NoC拓扑结构的阶数指的是一个r">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2022-10-25T13:09:53.719Z">
-<meta property="article:modified_time" content="2022-10-25T15:01:42.198Z">
+<meta property="article:published_time" content="2022-10-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-10-25T15:39:41.369Z">
 <meta property="article:author" content="ZiFeng Zhao">
 <meta property="article:tag" content="Computer Architecture, Network on Chip(NoC)">
 <meta name="twitter:card" content="summary">
@@ -1628,7 +1628,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1666710114524),
+    lastupdate: new Date(1666713895772),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2129,23 +2129,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
           
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-          
 				</ul>
 			</div>
       
@@ -2216,23 +2199,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
             
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-            
           </ul>
         </li>
 			</ul>
@@ -2252,14 +2218,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="none" class='cover-wrapper post search' style="display: none;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="https://s1.vika.cn/space/2022/09/09/aec0dbb7d8b74aecac29572cb929b84a"></div>
+  <div class='cover-bg' style='background-image:url(https://raw.githubusercontent.com/ZiFengZhao/PicsBed/main/preview.jpg)'></div>
 
 <div class='cover-body'>
   <div class='top'>
     
+      <img no-lazy class='logo' src='https://raw.githubusercontent.com/ZiFengZhao/PicsBed/main/%E7%BD%91%E7%AB%99logo.png'/>
+    
     
       <p class="title">淡定哥的Blog</p>
     
+    
+      <p class="subtitle">尽人事，听天命。</p>
     
   </div>
   <div class='bottom'>
@@ -2279,14 +2249,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               active-action="action-home">
-              <p>主页</p>
+              <i class='fa-solid fa-house-user fa-fw'></i><p>主页</p>
             </a>
           
-            <a href="/tags/"
+            <a href="/categories/"
               
               
-              active-action="action-tags">
-              <p>标签</p>
+              active-action="action-categories">
+              <i class='fa-solid fa-folder-open fa-fw'></i><p>文档分类</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              active-action="action-archives">
+              <i class='fa-solid fa-archive fa-fw'></i><p>日期归档</p>
             </a>
           
         
@@ -2334,9 +2311,9 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
             
 <div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <a itemprop="url" class='author' href="/" rel="nofollow">
-    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
-    <p itemprop="name">请设置文章作者</p>
+  <a itemprop="url" class='author' target="_blank" href="https://github.com/ZiFengZhao.git" rel="nofollow noopener">
+    <img itemprop="image" src="">
+    <p itemprop="name">ZiFeng Zhao</p>
   </a>
 </div>
 
@@ -2346,10 +2323,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
   <div class='new-meta-item category'>
     <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
-    <a class="category-link" href="/categories/NoC/">NoC</a>
+    <a class="category-link" href="/categories/Computer-Architecture/">Computer Architecture</a><span class="sep"></span><a class="category-link" href="/categories/Computer-Architecture/NoC/">NoC</a>
     
       <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-        <a href="/categories/NoC/" itemprop="url"><span itemprop="name">NoC</span></a>
+        <a href="/categories/Computer-Architecture/" itemprop="url"><span itemprop="name">Computer Architecture</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Computer-Architecture/NoC/" itemprop="url"><span itemprop="name">NoC</span></a>
       </span>
     
   </div>
@@ -2358,7 +2339,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-10-25T21:09:53+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-10-25T00:00:00+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
     <p>发布于：2022年10月25日</p>
@@ -2384,19 +2365,19 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <h1 id="Lab2-Topology-Comparison"><a href="#Lab2-Topology-Comparison" class="headerlink" title="Lab2: Topology Comparison"></a>Lab2: Topology Comparison</h1><h2 id="1-实验目的"><a href="#1-实验目的" class="headerlink" title="1. 实验目的"></a>1. 实验目的</h2><p>本实验比较了三种拓扑结构（Mesh; Flattened-Butterfly; hierarchical ring) 对NoC性能的影响。</p>
+    <h2 id="1-实验目的"><a href="#1-实验目的" class="headerlink" title="1. 实验目的"></a>1. 实验目的</h2><p>本实验比较了三种拓扑结构（Mesh; Flattened-Butterfly; hierarchical ring) 对NoC性能的影响。</p>
 <h2 id="2-实验原理"><a href="#2-实验原理" class="headerlink" title="2. 实验原理"></a>2. 实验原理</h2><h3 id="2-1-Flattened-Butterfly"><a href="#2-1-Flattened-Butterfly" class="headerlink" title="2.1 Flattened Butterfly"></a>2.1 Flattened Butterfly</h3><p>该拓扑结构是John Kim和James Balfour在2007年提出的Butterfly改进结构。该结构最突出的特点是高阶数(high-radix)。NoC拓扑结构的阶数指的是一个router所连接的端口数，与degree（度）的概念相似，但不完全相同。一个router的度数指的是其连接的链路(link)数。阶数则包括link数和其他相连的部件（如一致性控制器）的数量。高阶数带来的收益是拓扑结构的直径减小，因此平均跳数(Hops)、延迟时间（需要注意，延迟时间包括序列化延时Ts，头部flit传输延时Th以及走线延时Tw，Flattened Butterfly因为减少了平均跳数，因此显著降低了Th，但如果需要使走线面积不变，则每个通道的带宽会下降，因此Ts会增加，从论文的实验结果看，二者相加后总的延时还是下降的）和功耗会降低。</p>
 <p>本实验设定三种拓扑结构均有16个节点，每个节点包括一个路由器，以及一个CPU核的一致性控制器与之相连，因此下面给出4*4的Flattened Butterfly结构。</p>
-<p><img src="/../images/Lab2_report/FB.png" class="lazyload" data-srcset="/../images/Lab2_report/FB.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="FB"></p>
+<p><img src="/../images/Lab2_report/FB.png" alt="FB"></p>
 <p>上图是4*4的Flattened Butterfly结构，图中省略了每个节点所连接的一致性控制器。可以看到，每个节点的degree&#x3D;6（图中的有向连线为双向箭头，每条线表示to&#x2F;from router两个通道,degree计算时将一对src-dest对之间的两条通道记为一个degree）。每个节点的阶数为7（1个端口用于连接一个一致性控制器，6个端口用于连接12个to&#x2F;from通道）。</p>
 <p>如果采用XY路由算法，显然从任意源端到任意终端的最大跳数为2，经过简单计算，平均跳数Havg&#x3D;1.5  相比于4*4的Mesh结构的</p>
 <p>H_{avg} &#x3D;2.5，会使得Th或零注入延时显著减小<br>$$<br>T_{zeroload}&#x3D;(H_{avg}+1)*t_{router}+(H_{avg}+2)t_{wire}+T_{ser}<br>$$<br>假设单个路由器的流水延时和连线延时均为1，忽略排序延时，则Mesh的零注入延时为8 cycles，Flattened Butterfly的零注入延时为7. 当路由延时更高时，Flattened Butterfly延时相比于Mesh更加减少。</p>
 <p>在原文(Flattened Butterfly Topology for On Chip Networks)中，除了XY算法，作者还在Flattened Butterfly网络中使用了非最短路径的全局自适应路由算法——UGAL. 如下图所示：</p>
-<p><img src="/../images/Lab2_report/UGAL%E7%AE%97%E6%B3%95.png" class="lazyload" data-srcset="/../images/Lab2_report/UGAL%E7%AE%97%E6%B3%95.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="UGAL算法"></p>
+<p><img src="/../images/Lab2_report/UGAL%E7%AE%97%E6%B3%95.png" alt="UGAL算法"></p>
 <p>（a)表示一个flit由R1发往R2   (b)是这个情景的XY路由算法  (c)和(d)是该情景的UGAL算法，当R1检测到其与R2之间的链路堵塞时，可以采用这两种非最短路径，(c)首先越过R2发往R3，到达R3后再发往R2   (d)类似。在该算法基础上作者对路由器中的开关做了一些改进，使得采用非最短路由时只有control flit需要经过intermediate节点，而数据flit不必真的经过intermediate node. 从而减少了平均跳数。示意图如下，具体的硬件和路由算法改进可参考原文，本实验只讨论XY算法，因此不过多介绍这项技术。</p>
-<p><img src="/../images/Lab2_report/%E6%94%B9%E8%BF%9BUGAL%E7%A4%BA%E6%84%8F.png" class="lazyload" data-srcset="/../images/Lab2_report/%E6%94%B9%E8%BF%9BUGAL%E7%A4%BA%E6%84%8F.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="改进UGAL示意图"></p>
+<p><img src="/../images/Lab2_report/%E6%94%B9%E8%BF%9BUGAL%E7%A4%BA%E6%84%8F.png" alt="改进UGAL示意图"></p>
 <h3 id="2-2-Hierarchical-Ring"><a href="#2-2-Hierarchical-Ring" class="headerlink" title="2.2 Hierarchical Ring"></a>2.2 Hierarchical Ring</h3><p>这种拓扑结构为层次化的Ring结构，每层拓扑都是Ring,下面展示了16 nodes的结构：</p>
-<p><img src="/../images/Lab2_report/HierarchicalRing.png" class="lazyload" data-srcset="/../images/Lab2_report/HierarchicalRing.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Hierarchical Ring"></p>
+<p><img src="/../images/Lab2_report/HierarchicalRing.png" alt="Hierarchical Ring"></p>
 <p>第一层有4个Ring，通过第二层的Ring(5,6,10,9)环连接在一起。</p>
 <h2 id="3-实验内容"><a href="#3-实验内容" class="headerlink" title="3. 实验内容"></a>3. 实验内容</h2><h3 id="3-1-Traffic-Description"><a href="#3-1-Traffic-Description" class="headerlink" title="3.1 Traffic Description"></a>3.1 Traffic Description</h3><p>仿真时所有的packet都是64-bits大小。每个packet所包含的flit数取决于链路宽度。公式如下：<br>$$<br>number\quad of\quad flits \quad &#x3D; \quad (packet\quad size)&#x2F;(link\quad width)<br>$$<br>例如在命令行中设置链路宽度为32bits：–link-width-bits&#x3D;32，则一个packet会被GARNET自动分割成2 flits. </p>
 <p>实验要求分别运行三种Traffic pattern:</p>
@@ -2407,7 +2388,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p>第一种pattern比较简单：每个源节点的流量等概率发送到所有节点中（包括本身）。显然这种traffic pattern天然地具有平衡网络中的流量负载的属性。因此其最大饱和点也比其他所有pattern的饱和点要大。</p>
 <p>Tornado: 注入某个节点node i的包或flit需要发送到节点(i + (k&#x2F;2) - 1) mod k处。例如下图</p>
-<p><img src="/../images/Lab2_report/tornado.png" class="lazyload" data-srcset="/../images/Lab2_report/tornado.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="tornado"></p>
+<p><img src="/../images/Lab2_report/tornado.png" alt="tornado"></p>
 <p>对于4*4 的三种拓扑结构来说，k&#x3D;4, 因此节点（i，j)向节点（i, j+1) 发送包。（如果j&#x3D;3, 则规定j+1&#x3D;0）</p>
 <p>Neighbor: 目的节点即为源节点的邻近一个节点，在GARNET中设置目的节点为源节点的右边一个节点。</p>
 <p>可见，本实验中Tornado与Neighbor的效果相同。</p>
@@ -2435,7 +2416,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">CFG1	Uniform_Random    Mesh</span><br><span class="line">Latency            InjectRate</span><br><span class="line">10                  0.02</span><br><span class="line">10.2                0.04</span><br><span class="line">...</span><br><span class="line">31                  0.40</span><br><span class="line">---------------------------------------------</span><br><span class="line">CFG1	Uniform_Random    Flattened Butterfly</span><br><span class="line">Latency            InjectRate</span><br><span class="line">10                  0.02</span><br><span class="line">10.2                0.04</span><br><span class="line">...</span><br><span class="line">31                  0.40</span><br><span class="line">---------------------------------------------</span><br><span class="line">CFG1	Uniform_Random    Hierarchical Ring</span><br><span class="line">Latency            InjectRate</span><br><span class="line">10                  0.02</span><br><span class="line">10.2                0.04</span><br><span class="line">...</span><br><span class="line">31                  0.40</span><br><span class="line">---------------------------------------------</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 
 <p>仿真结束后使用编写的数据可视化脚本读取该文件并可视化。</p>
-<h2 id="5-试验结果"><a href="#5-试验结果" class="headerlink" title="5. 试验结果"></a>5. 试验结果</h2><p><img src="/../images/Lab2_report/CFG1.png" class="lazyload" data-srcset="/../images/Lab2_report/CFG1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="CFG1"></p>
+<h2 id="5-试验结果"><a href="#5-试验结果" class="headerlink" title="5. 试验结果"></a>5. 试验结果</h2><p><img src="/../images/Lab2_report/CFG1.png" alt="CFG1"></p>
 <p>上图是配置1——等效链路宽度的试验结果。每张子图分别是三种拓扑结构在每种Traffic Pattern注射条件下的平均包延迟与注射率的关系。</p>
 <table>
 <thead>
@@ -2486,7 +2467,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <td>0.44</td>
 </tr>
 </tbody></table>
-<p><img src="/../images/Lab2_report/CFG2.png" class="lazyload" data-srcset="/../images/Lab2_report/CFG2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="CFG2"></p>
+<p><img src="/../images/Lab2_report/CFG2.png" alt="CFG2"></p>
 <p>上图是配置2——等效对半带宽的试验结果。</p>
 <table>
 <thead>
@@ -2585,16 +2566,16 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </ul>
 <p>根据包延时公式：<br>$$<br>T_{zeroload}&#x3D;(H_{avg}+1)*t_{router}+(H_{avg}+2)t_{wire}+T_{ser}<br>$$<br>Mesh的平均跳数是2.5，F-B的平均跳数是1.5  因此t_r越大，Mesh的延时增长的更快。可以在每次仿真前增加t_r，找到两种拓扑结构的低注入延时交叉点，即为所求。</p>
 <p>设置t_r从1开始，每次仿真前加1，实验发现当t_r增加到50时，Mesh的延时仍未超过F-B 并且Mesh延时缓慢增加，斜率为4.5，而F-B的延时在t_r较小时缓慢增加，斜率为10.    当t_r大到一定程度后，开始迅速增加。如下图所示：</p>
-<p><img src="/../images/Lab2_report/t_r1.png" class="lazyload" data-srcset="/../images/Lab2_report/t_r1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="TR1"></p>
+<p><img src="/../images/Lab2_report/t_r1.png" alt="TR1"></p>
 <p>两种拓扑结构的延时随路由器延时线性增加的原因是在延时的公式中路由器延时前的系数是常数</p>
 <p>但斜率与理论不符。Mesh的理论斜率应为3.5，实际是4.5     F-B的理论斜率是2.5 实际是10</p>
 <p>另一个问题是F-B的延时在后半段迅速增加，或许是由包之间的竞争导致的。</p>
 <p>为控制变量，将F-B的链路宽度分别设置为32-bits，得到以下结果。</p>
-<p><img src="/../images/Lab2_report/t_r2.png" class="lazyload" data-srcset="/../images/Lab2_report/t_r2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="t2"></p>
+<p><img src="/../images/Lab2_report/t_r2.png" alt="t2"></p>
 <p>F-B的链路位宽为16-bits时，斜率为3.5    为32-bits时，斜率为4.5   但上述公式中F-B的延时斜率理论值为2.5</p>
 <p>说明延迟公式中应该还存在一些其他造成延时增加的因素。实际的包延时包括了因为竞争而产生的延时， 而上述延迟公式是零注入延迟的计算公式，即所有包都没有发生竞争时的公式。注意在这两次实验中我们设置注射率为0.02 packets&#x2F;cycle&#x2F;node  即对于每个节点来说，平均50个cycle向其中注入1个packet    对于8-bits的链路宽度，将一个包序列化需要8个cycle, 平均跳数为1.5，相邻路由器之间的链路延迟为1， 则公式中第二项连线上的延迟为3.5 cycles       当路由器延时增大到15时，零注入延迟为50；   继续增加路由器延时，当向某个节点注入包时，上次注入该节点的包还没有到达目的节点。   当路由器延时增大到35时，零注入延迟约为100，此时显然由于注入包的频率过高（此时0.02的注入率已经不再可以近似为零注入），导致注入的包发生了竞争。因此从t_r &#x3D; 35开始包延时大幅增加。  可以预见，如果减少注入率，在t_r &#x3D; 35之后的曲线斜率应该会减小。</p>
 <p>为此减小注入率，观察结果：</p>
-<p><img src="/../images/Lab2_report/t_r3.png" class="lazyload" data-srcset="/../images/Lab2_report/t_r3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="tr3"></p>
+<p><img src="/../images/Lab2_report/t_r3.png" alt="tr3"></p>
 <p>当减少注入率到0.01时，消除了因注入包之间的竞争而剧烈增加的延时。但是斜率仍然是10左右，与零注入延时公式中的理论斜率——2.5不符，可能是由于仍存在竞争，导致斜率高于理论值。为此继续减少注入率到0.001，观察斜率。 实验结果表明斜率仍然是10左右，说明斜率超过理论值的主要原因不是竞争。</p>
 <p>总结一下，在竞争可忽略的情况下，F-B的网络延时增长速度随着链路宽度的减小而增加：</p>
 <p>link width &#x3D; 32    —-&gt;  斜率 &#x3D; 3.5</p>
@@ -2626,7 +2607,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-10-25T23:01:42+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-10-25T23:39:41+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
     <p>更新于：2022年10月25日</p>
@@ -2652,7 +2633,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png">
           
         </a>
       
@@ -2664,7 +2645,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png">
           
         </a>
       
@@ -2676,7 +2657,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
           >
           
-            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png">
           
         </a>
       
@@ -2932,33 +2913,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-
-
-  <script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 0
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
-    lazyLoadInstance.update();
-  });
-</script>
 
 
 
@@ -3238,6 +3192,77 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <!-- pjax 标签必须存在于所有页面 否则 pjax error -->
 <pjax>
 
+        <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = "https://unpkg.com/volantis-static@0.0.1654736714924/libs/mathjax/es5/tex-mml-chtml.js";
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typesetPromise();
+  }
+</script>
+
+        <style>
+  #post-body p {
+    text-indent: 2em;
+  }
+  #post-body .new-meta-box p,
+  #post-body .note p,
+  #post-body .prev-next p,
+  #post-body .tag p,
+  #post-body blockquote p,
+  #post-body details p,
+  #post-body p.p,
+  #post-body .tab-pane .checkbox
+  #post-body section p {
+    text-indent: initial;
+  }
+</style>
+
+
+
 </pjax>
 
 <script>
@@ -3369,7 +3394,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/","sameAs":["https://github.com/volantis-x"],"description":"用来记录学习心得"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://ZiFengZhao.github.io/","name":"KimFang's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://ZiFengZhao.github.io/categories/NoC/","name":"NoC"}},{"@type":"ListItem","position":3,"item":{"@id":"https://ZiFengZhao.github.io/2022/10/25/Lab2_report/","name":"Topology Comparison"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","keywords":"Computer Architecture, Network on Chip(NoC)","description":"用来记录学习心得","author":{"@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/","description":"用来记录学习心得"},"publisher":{"@type":"Organization","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://ZiFengZhao.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Topology Comparison","description":"用来记录学习心得","inLanguage":["zh-CN","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://zifengzhao.github.io/2022/10/25/Lab2_report/"},"author":{"@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/"},"publisher":{"@type":"Organization","name":"KimFang's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://zifengzhao.github.io/2022/10/25/Lab2_report/","wordCount":0,"datePublished":"2022-10-25T13:09:53.719Z","dateModified":"2022-10-25T15:01:42.198Z","articleSection":"NoC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/","sameAs":["https://github.com/volantis-x"],"description":"用来记录学习心得"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://ZiFengZhao.github.io/","name":"KimFang's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://ZiFengZhao.github.io/categories/Computer-Architecture/","name":"Computer Architecture"}},{"@type":"ListItem","position":2,"item":{"@id":"https://ZiFengZhao.github.io/categories/Computer-Architecture/NoC/","name":"NoC"}},{"@type":"ListItem","position":3,"item":{"@id":"https://ZiFengZhao.github.io/2022/10/25/Lab2_report/","name":"Topology Comparison"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","keywords":"Computer Architecture, Network on Chip(NoC)","description":"用来记录学习心得","author":{"@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/","description":"用来记录学习心得"},"publisher":{"@type":"Organization","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://ZiFengZhao.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Topology Comparison","description":"用来记录学习心得","inLanguage":["zh-CN","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://zifengzhao.github.io/2022/10/25/Lab2_report/"},"author":{"@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/"},"publisher":{"@type":"Organization","name":"KimFang's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://zifengzhao.github.io/2022/10/25/Lab2_report/","wordCount":0,"datePublished":"2022-10-24T16:00:00.000Z","dateModified":"2022-10-25T15:39:41.369Z","articleSection":"Computer Architecture","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 

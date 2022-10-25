@@ -1626,7 +1626,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1666710114524),
+    lastupdate: new Date(1666713895772),
     sidebar: {
       for_page: ["blogger","category","tagcloud","text"],
       for_post: ["toc"],
@@ -2127,23 +2127,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
           
-            
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-          
 				</ul>
 			</div>
       
@@ -2214,23 +2197,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
           
             
-              
-            
-              <li>
-                <a class="menuitem flat-box faa-parent animated-hover"
-                href="/friends/" title="友链"
-                  
-                  
-                  
-                    active-action="action-friends"
-                  >
-                  <i class='fa-solid fa-link fa-fw'></i>友链
-                </a>
-                
-              </li>
-            
-          
-            
           </ul>
         </li>
 			</ul>
@@ -2250,14 +2216,18 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
       <div id="full" class='cover-wrapper  search' style="display: ;">
         
-  <div class='cover-bg lazyload placeholder' data-bg="https://s1.vika.cn/space/2022/09/09/aec0dbb7d8b74aecac29572cb929b84a"></div>
+  <div class='cover-bg' style='background-image:url(https://raw.githubusercontent.com/ZiFengZhao/PicsBed/main/preview.jpg)'></div>
 
 <div class='cover-body'>
   <div class='top'>
     
+      <img no-lazy class='logo' src='https://raw.githubusercontent.com/ZiFengZhao/PicsBed/main/%E7%BD%91%E7%AB%99logo.png'/>
+    
     
       <p class="title">淡定哥的Blog</p>
     
+    
+      <p class="subtitle">尽人事，听天命。</p>
     
   </div>
   <div class='bottom'>
@@ -2277,14 +2247,21 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
               
               
               active-action="action-home">
-              <p>主页</p>
+              <i class='fa-solid fa-house-user fa-fw'></i><p>主页</p>
             </a>
           
-            <a href="/tags/"
+            <a href="/categories/"
               
               
-              active-action="action-tags">
-              <p>标签</p>
+              active-action="action-categories">
+              <i class='fa-solid fa-folder-open fa-fw'></i><p>文档分类</p>
+            </a>
+          
+            <a href="/archives/"
+              
+              
+              active-action="action-archives">
+              <i class='fa-solid fa-archive fa-fw'></i><p>日期归档</p>
             </a>
           
         
@@ -2350,8 +2327,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   <div class='md article-desc' itemprop="articleBody">
     
       
-        Lab2: Topology Comparison1. 实验目的本实验比较了三种拓扑结构（Mesh; Flattened-Butterfly; hierarchical ring) 对NoC性能的影响。
-2. 实验原理2.1 Flattened Butterfly该拓扑结构是John Kim和James Balfour在2007年提出的Butterfly改进结构。该结构最突出的特点是高阶数(...
+        1. 实验目的本实验比较了三种拓扑结构（Mesh; Flattened-Butterfly; hierarchical ring) 对NoC性能的影响。
+2. 实验原理2.1 Flattened Butterfly该拓扑结构是John Kim和James Balfour在2007年提出的Butterfly改进结构。该结构最突出的特点是高阶数(high-radix)。NoC拓扑结构的阶数指的是...
       
     
   </div>
@@ -2359,13 +2336,25 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='meta-v3' line_style='solid'>
       <div>
         
-        <time itemprop="dateCreated datePublished" datetime="2022-10-25T21:09:53+08:00">2022-10-25</time>
+          
+          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/ZiFengZhao.git'><img src=''></a>
+          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <meta itemprop="image" content="">
+            <meta itemprop="name" content="ZiFeng Zhao">
+            <meta itemprop="url" content="https://github.com/ZiFengZhao.git">
+          </span>
+        
+        <time itemprop="dateCreated datePublished" datetime="2022-10-25T00:00:00+08:00">2022-10-25</time>
         
           <span class="dot"></span>
-          <a class="category-link" href="/categories/NoC/">NoC</a>
+          <a class="category-link" href="/categories/Computer-Architecture/">Computer Architecture</a><span class="sep"></span><a class="category-link" href="/categories/Computer-Architecture/NoC/">NoC</a>
           
             <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/NoC/" itemprop="url"><span itemprop="name">NoC</span></a>
+              <a href="/categories/Computer-Architecture/" itemprop="url"><span itemprop="name">Computer Architecture</span></a>
+            </span>
+          
+            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+              <a href="/categories/Computer-Architecture/NoC/" itemprop="url"><span itemprop="name">NoC</span></a>
             </span>
           
         
@@ -2415,7 +2404,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           <h2>淡定哥</h2>
         
         
-          <p><a href="mailto:&#50;&#50;&#49;&#x31;&#x32;&#x30;&#x32;&#x30;&#x30;&#54;&#x36;&#x40;&#109;&#x2e;&#x66;&#x75;&#100;&#97;&#110;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;">&#50;&#50;&#49;&#x31;&#x32;&#x30;&#x32;&#x30;&#x30;&#54;&#x36;&#x40;&#109;&#x2e;&#x66;&#x75;&#100;&#97;&#110;&#46;&#x65;&#100;&#x75;&#46;&#x63;&#x6e;</a></p>
+          <p><a href="mailto:&#x32;&#50;&#x31;&#x31;&#x32;&#x30;&#x32;&#x30;&#x30;&#x36;&#54;&#64;&#109;&#46;&#x66;&#x75;&#100;&#x61;&#x6e;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#x6e;">&#x32;&#50;&#x31;&#x31;&#x32;&#x30;&#x32;&#x30;&#x30;&#x36;&#54;&#64;&#109;&#46;&#x66;&#x75;&#100;&#x61;&#x6e;&#46;&#101;&#100;&#117;&#x2e;&#x63;&#x6e;</a></p>
 
         
         
@@ -2462,8 +2451,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       <ul class="entry navigation">
         
           <li><a class="flat-box"
-            title="/categories/NoC/" href="/categories/NoC/"
-            active-action="action-categoriesNoC"
+            title="/categories/Computer-Architecture/" href="/categories/Computer-Architecture/"
+            active-action="action-categoriesComputer-Architecture"
+            ><div class='name'>Computer Architecture</div><div class='badge'>(1)</div></a></li>
+        
+          <li><a class="flat-box child"
+            title="/categories/Computer-Architecture/NoC/" href="/categories/Computer-Architecture/NoC/"
+            active-action="action-categoriesComputer-ArchitectureNoC"
             ><div class='name'>NoC</div><div class='badge'>(1)</div></a></li>
         
       </ul>
@@ -2645,33 +2639,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-
-
-  <script defer src="https://unpkg.com/volantis-static@0.0.1654736714924/libs/vanilla-lazyload/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazyload",
-    threshold: 0
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-  document.addEventListener('pjax:complete', function () {
-    lazyLoadInstance.update();
-  });
-</script>
 
 
 
