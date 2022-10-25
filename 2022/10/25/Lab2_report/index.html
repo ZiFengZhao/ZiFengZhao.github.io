@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.6">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="noindex,follow">
-  <link rel="canonical" href="https://ZiFengZhao.github.io/archives/2022/"/>
+  
+  <link rel="canonical" href="https://ZiFengZhao.github.io/2022/10/25/lab2_report/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,17 +32,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>归档：2022 - KimFang's Blog</title>
+  <title>Topology Comparison - KimFang's Blog</title>
   <meta name="keywords" content="Computer Architecture, Network on Chip(NoC)">
   <meta desc name="description" content="用来记录学习心得 - ZiFeng Zhao - KimFang's Blog">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="KimFang&#39;s Blog">
-<meta property="og:url" content="https://zifengzhao.github.io/archives/2022/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Topology Comparison">
+<meta property="og:url" content="https://zifengzhao.github.io/2022/10/25/Lab2_report/index.html">
 <meta property="og:site_name" content="KimFang&#39;s Blog">
-<meta property="og:description" content="用来记录学习心得">
+<meta property="og:description" content="Lab2: Topology Comparison1. 实验目的本实验比较了三种拓扑结构（Mesh; Flattened-Butterfly; hierarchical ring) 对NoC性能的影响。 2. 实验原理2.1 Flattened Butterfly该拓扑结构是John Kim和James Balfour在2007年提出的Butterfly改进结构。该结构最突出的特点是高阶数(hig">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-10-25T13:09:53.719Z">
+<meta property="article:modified_time" content="2022-10-25T13:44:21.183Z">
 <meta property="article:author" content="ZiFeng Zhao">
 <meta property="article:tag" content="Computer Architecture, Network on Chip(NoC)">
 <meta name="twitter:card" content="summary">
@@ -2049,7 +2051,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow floatable blur "  >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header always shadow floatable blur show"  >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2250,7 +2252,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="half" class='cover-wrapper  search' style="display: ;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div class='cover-bg lazyload placeholder' data-bg="https://s1.vika.cn/space/2022/09/09/aec0dbb7d8b74aecac29572cb929b84a"></div>
 
@@ -2305,21 +2307,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-	
-		
-  <section class="post-list">
-    
-      
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://zifengzhao.github.io/2022/10/25/Lab2_report/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="KimFang's Blog">
@@ -2329,66 +2317,419 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="用来记录学习心得">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/10/25/Lab2_report/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         Topology Comparison
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' href="/" rel="nofollow">
+    <img itemprop="image" src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/apple-touch-icon.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+    <p itemprop="name">请设置文章作者</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/NoC/">NoC</a>
     
-      
-        Lab2: Topology Comparison1. 实验目的本实验比较了三种拓扑结构（Mesh; Flattened-Butterfly; hierarchical ring) 对NoC性能的影响。
-2. 实验原理2.1 Flattened Butterfly该拓扑结构是John Kim和James Balfour在2007年提出的Butterfly改进结构。该结构最突出的特点是高阶数(...
-      
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/NoC/" itemprop="url"><span itemprop="name">NoC</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-10-25T21:09:53+08:00">2022-10-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/NoC/">NoC</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/NoC/" itemprop="url"><span itemprop="name">NoC</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-10-25T21:09:53+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年10月25日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h1 id="Lab2-Topology-Comparison"><a href="#Lab2-Topology-Comparison" class="headerlink" title="Lab2: Topology Comparison"></a>Lab2: Topology Comparison</h1><h2 id="1-实验目的"><a href="#1-实验目的" class="headerlink" title="1. 实验目的"></a>1. 实验目的</h2><p>本实验比较了三种拓扑结构（Mesh; Flattened-Butterfly; hierarchical ring) 对NoC性能的影响。</p>
+<h2 id="2-实验原理"><a href="#2-实验原理" class="headerlink" title="2. 实验原理"></a>2. 实验原理</h2><h3 id="2-1-Flattened-Butterfly"><a href="#2-1-Flattened-Butterfly" class="headerlink" title="2.1 Flattened Butterfly"></a>2.1 Flattened Butterfly</h3><p>该拓扑结构是John Kim和James Balfour在2007年提出的Butterfly改进结构。该结构最突出的特点是高阶数(high-radix)。NoC拓扑结构的阶数指的是一个router所连接的端口数，与degree（度）的概念相似，但不完全相同。一个router的度数指的是其连接的链路(link)数。阶数则包括link数和其他相连的部件（如一致性控制器）的数量。高阶数带来的收益是拓扑结构的直径减小，因此平均跳数(Hops)、延迟时间（需要注意，延迟时间包括序列化延时Ts，头部flit传输延时Th以及走线延时Tw，Flattened Butterfly因为减少了平均跳数，因此显著降低了Th，但如果需要使走线面积不变，则每个通道的带宽会下降，因此Ts会增加，从论文的实验结果看，二者相加后总的延时还是下降的）和功耗会降低。</p>
+<p>本实验设定三种拓扑结构均有16个节点，每个节点包括一个路由器，以及一个CPU核的一致性控制器与之相连，因此下面给出4*4的Flattened Butterfly结构。</p>
+<p><img src="/../images/Lab2_report/FB.png" class="lazyload" data-srcset="/../images/Lab2_report/FB.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="FB"></p>
+<p>上图是4*4的Flattened Butterfly结构，图中省略了每个节点所连接的一致性控制器。可以看到，每个节点的degree&#x3D;6（图中的有向连线为双向箭头，每条线表示to&#x2F;from router两个通道,degree计算时将一对src-dest对之间的两条通道记为一个degree）。每个节点的阶数为7（1个端口用于连接一个一致性控制器，6个端口用于连接12个to&#x2F;from通道）。</p>
+<p>如果采用XY路由算法，显然从任意源端到任意终端的最大跳数为2，经过简单计算，平均跳数Havg&#x3D;1.5  相比于4*4的Mesh结构的</p>
+<p>H_{avg} &#x3D;2.5，会使得Th或零注入延时显著减小<br>$$<br>T_{zeroload}&#x3D;(H_{avg}+1)*t_{router}+(H_{avg}+2)t_{wire}+T_{ser}<br>$$<br>假设单个路由器的流水延时和连线延时均为1，忽略排序延时，则Mesh的零注入延时为8 cycles，Flattened Butterfly的零注入延时为7. 当路由延时更高时，Flattened Butterfly延时相比于Mesh更加减少。</p>
+<p>在原文(Flattened Butterfly Topology for On Chip Networks)中，除了XY算法，作者还在Flattened Butterfly网络中使用了非最短路径的全局自适应路由算法——UGAL. 如下图所示：</p>
+<p><img src="/../images/Lab2_report/UGAL%E7%AE%97%E6%B3%95.png" class="lazyload" data-srcset="/../images/Lab2_report/UGAL%E7%AE%97%E6%B3%95.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="UGAL算法"></p>
+<p>（a)表示一个flit由R1发往R2   (b)是这个情景的XY路由算法  (c)和(d)是该情景的UGAL算法，当R1检测到其与R2之间的链路堵塞时，可以采用这两种非最短路径，(c)首先越过R2发往R3，到达R3后再发往R2   (d)类似。在该算法基础上作者对路由器中的开关做了一些改进，使得采用非最短路由时只有control flit需要经过intermediate节点，而数据flit不必真的经过intermediate node. 从而减少了平均跳数。示意图如下，具体的硬件和路由算法改进可参考原文，本实验只讨论XY算法，因此不过多介绍这项技术。</p>
+<p><img src="/../images/Lab2_report/%E6%94%B9%E8%BF%9BUGAL%E7%A4%BA%E6%84%8F.png" class="lazyload" data-srcset="/../images/Lab2_report/%E6%94%B9%E8%BF%9BUGAL%E7%A4%BA%E6%84%8F.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="改进UGAL示意图"></p>
+<h3 id="2-2-Hierarchical-Ring"><a href="#2-2-Hierarchical-Ring" class="headerlink" title="2.2 Hierarchical Ring"></a>2.2 Hierarchical Ring</h3><p>这种拓扑结构为层次化的Ring结构，每层拓扑都是Ring,下面展示了16 nodes的结构：</p>
+<p><img src="/../images/Lab2_report/HierarchicalRing.png" class="lazyload" data-srcset="/../images/Lab2_report/HierarchicalRing.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="Hierarchical Ring"></p>
+<p>第一层有4个Ring，通过第二层的Ring(5,6,10,9)环连接在一起。</p>
+<h2 id="3-实验内容"><a href="#3-实验内容" class="headerlink" title="3. 实验内容"></a>3. 实验内容</h2><h3 id="3-1-Traffic-Description"><a href="#3-1-Traffic-Description" class="headerlink" title="3.1 Traffic Description"></a>3.1 Traffic Description</h3><p>仿真时所有的packet都是64-bits大小。每个packet所包含的flit数取决于链路宽度。公式如下：<br>$$<br>number\quad of\quad flits \quad &#x3D; \quad (packet\quad size)&#x2F;(link\quad width)<br>$$<br>例如在命令行中设置链路宽度为32bits：–link-width-bits&#x3D;32，则一个packet会被GARNET自动分割成2 flits. </p>
+<p>实验要求分别运行三种Traffic pattern:</p>
+<ul>
+<li>Uniform Random </li>
+<li>Tornado</li>
+<li>Neighbor</li>
+</ul>
+<p>第一种pattern比较简单：每个源节点的流量等概率发送到所有节点中（包括本身）。显然这种traffic pattern天然地具有平衡网络中的流量负载的属性。因此其最大饱和点也比其他所有pattern的饱和点要大。</p>
+<p>Tornado: 注入某个节点node i的包或flit需要发送到节点(i + (k&#x2F;2) - 1) mod k处。例如下图</p>
+<p><img src="/../images/Lab2_report/tornado.png" class="lazyload" data-srcset="/../images/Lab2_report/tornado.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="tornado"></p>
+<p>对于4*4 的三种拓扑结构来说，k&#x3D;4, 因此节点（i，j)向节点（i, j+1) 发送包。（如果j&#x3D;3, 则规定j+1&#x3D;0）</p>
+<p>Neighbor: 目的节点即为源节点的邻近一个节点，在GARNET中设置目的节点为源节点的右边一个节点。</p>
+<p>可见，本实验中Tornado与Neighbor的效果相同。</p>
+<h3 id="3-2-实验方法"><a href="#3-2-实验方法" class="headerlink" title="3.2 实验方法"></a>3.2 实验方法</h3><p>对于一个给定的网络配置，最开始仿真时设置注射率为0.02，之后每次以0.02的间隔增加注射率直到网络饱和。（note: 最好第一次仿真手动进行，得到Flit&#x2F;Packet 的近似Zero Load Latency——L0后，后面用一个脚本跑每次仿真，并且检测Latency是否超过3倍L0，即饱和，超过饱和点后结束仿真）。</p>
+<p>根据得到的延迟—注射率数据，绘制average packet latency vs. Injection rate图。图中需要同时包括三种拓扑结构的相应曲线。</p>
+<p>有两种网络配置：</p>
+<ul>
+<li>等效链路宽度： 设定Mesh的链路宽度为32bits.  另外两种拓扑结构的链路宽度同样为32bits</li>
+<li>等效对半带宽(Bisection Bandwidth): 设定Mesh的链路宽度为32bits. 另外两种拓扑结构的对半带宽与Mesh的相等，根据这一限制条件调整其链路宽度。因此总共需要画6张图：2种配置*3种Traffic Pattern</li>
+</ul>
+<h2 id="4-实验过程"><a href="#4-实验过程" class="headerlink" title="4. 实验过程"></a>4. 实验过程</h2><p>GARNET给出了Mesh的模型，可以在命令行中修改Mesh网络的拓扑配置，如CPU数，目录数，Mesh网络行数，链路宽度。另外两种拓扑结构没有给出，需要自己建模。</p>
+<h3 id="4-1-GARNET-拓扑结构建模方法"><a href="#4-1-GARNET-拓扑结构建模方法" class="headerlink" title="4.1 GARNET 拓扑结构建模方法"></a>4.1 GARNET 拓扑结构建模方法</h3><p>GARNET遵循gem5的开发方法，对于NoC来说，GARNET将NoC的各个部件如router, Network Interface, Switch Allocator, Virtual Channel, Link, Buffer等部件使用C++进行了建模。然后在Python脚本中对这些部件进行了“组合”，如同搭积木。由于拓扑结构不需要修改每个部件的内部结构，因此可以方便的在Python脚本中对它们任意“组合”，形成custom topology. </p>
+<h3 id="4-2-Flattened-Butterfly-modeling"><a href="#4-2-Flattened-Butterfly-modeling" class="headerlink" title="4.2 Flattened Butterfly modeling"></a>4.2 Flattened Butterfly modeling</h3><p>参考configs&#x2F;topologies&#x2F;Mesh_XY.py中对Mesh的构建方法，对于k*k的网络来说，遍历（row, col), 0&lt;&#x3D; row &lt; k, 0&lt;&#x3D; col &lt; k-1的所有节点，找到每个源-目的节点对，将其连线即可。连线记为向一个链路列表中添加源-目的节点之间的链路，如下代码所示：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># East output to West input links (weight = 1)</span></span><br><span class="line"><span class="keyword">for</span> row <span class="keyword">in</span> <span class="built_in">range</span>(num_rows):</span><br><span class="line">    <span class="keyword">for</span> col <span class="keyword">in</span> <span class="built_in">range</span>(num_columns):</span><br><span class="line">        <span class="keyword">if</span> (col + <span class="number">1</span> &lt; num_columns):</span><br><span class="line">            east_out = col + (row * num_columns)</span><br><span class="line">            <span class="keyword">for</span> bypass_dest <span class="keyword">in</span> <span class="built_in">range</span>(col + <span class="number">1</span>, num_columns):</span><br><span class="line">                west_in = bypass_dest + (row * num_columns)</span><br><span class="line">                int_links.append(IntLink(link_id=link_count,</span><br><span class="line">                                     src_node=routers[east_out],</span><br><span class="line">                                     dst_node=routers[west_in],</span><br><span class="line">                                     src_outport=<span class="string">&quot;East&quot;</span>,</span><br><span class="line">                                     dst_inport=<span class="string">&quot;West&quot;</span>,</span><br><span class="line">                                     latency = link_latency,</span><br><span class="line">                                     weight=<span class="number">1</span>))</span><br><span class="line">                link_count += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+
+<p>对于每个源-目的节点对，都向int_links列表中添加一个相应的IntLink对象，该对象在实例化时需要指定链路ID，链路的源&#x2F;目的节点的路由器和方向，链路延时，以及权重weight（weight在XY算法中用于指明路由方向的优先级，对于XY算法来说，x方向的权重设为1，Y方向的权重设为2，表示先走X，再走Y）</p>
+<p>上述代码对应于配置1. </p>
+<p>对于配置2——等效对半带宽，由于bisection cutting后可以看到F-B结构的通道数是Mesh的4倍，为保持相同带宽，考虑到Mesh的通道宽度为32-bits，因此F-B的通道宽度应调整为8-bits. 因此上述代码也同样适用于配置2</p>
+<h3 id="4-3-Hierarchical-Ring-Modeling"><a href="#4-3-Hierarchical-Ring-Modeling" class="headerlink" title="4.3 Hierarchical Ring Modeling"></a>4.3 Hierarchical Ring Modeling</h3><p>为便于代码实现，我们将该结构固定为4*4. </p>
+<p>首先构建4个L1 小环，然后构建L2环。</p>
+<p>对于配置1，链路宽度为32-bits</p>
+<p>对于配置2，链路宽度为64-bits</p>
+<h3 id="4-4-仿真脚本"><a href="#4-4-仿真脚本" class="headerlink" title="4.4 仿真脚本"></a>4.4 仿真脚本</h3><p>仿真脚本输出文件记为lab2_data.txt</p>
+<p>该文件内容根据配置类型（配置1,2）和Traffic Pattern以及拓扑结构分为18个部分。每部分的每一行记录包延迟和对应注射率。如下所示：</p>
+<figure class="highlight txt"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">CFG1	Uniform_Random    Mesh</span><br><span class="line">Latency            InjectRate</span><br><span class="line">10                  0.02</span><br><span class="line">10.2                0.04</span><br><span class="line">...</span><br><span class="line">31                  0.40</span><br><span class="line">---------------------------------------------</span><br><span class="line">CFG1	Uniform_Random    Flattened Butterfly</span><br><span class="line">Latency            InjectRate</span><br><span class="line">10                  0.02</span><br><span class="line">10.2                0.04</span><br><span class="line">...</span><br><span class="line">31                  0.40</span><br><span class="line">---------------------------------------------</span><br><span class="line">CFG1	Uniform_Random    Hierarchical Ring</span><br><span class="line">Latency            InjectRate</span><br><span class="line">10                  0.02</span><br><span class="line">10.2                0.04</span><br><span class="line">...</span><br><span class="line">31                  0.40</span><br><span class="line">---------------------------------------------</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>仿真结束后使用编写的数据可视化脚本读取该文件并可视化。</p>
+<h2 id="5-试验结果"><a href="#5-试验结果" class="headerlink" title="5. 试验结果"></a>5. 试验结果</h2><p><img src="/../images/Lab2_report/CFG1.png" class="lazyload" data-srcset="/../images/Lab2_report/CFG1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="CFG1"></p>
+<p>上图是配置1——等效链路宽度的试验结果。每张子图分别是三种拓扑结构在每种Traffic Pattern注射条件下的平均包延迟与注射率的关系。</p>
+<table>
+<thead>
+<tr>
+<th>Traffic Pattern&#x2F;Zero Load Latency(L0); 饱和点δ</th>
+<th>Mesh</th>
+<th>Mesh</th>
+<th>FB</th>
+<th>FB</th>
+<th>HR</th>
+<th>HR</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>L0</td>
+<td>δ</td>
+<td>L0</td>
+<td>δ</td>
+<td>L0</td>
+<td>δ</td>
+</tr>
+<tr>
+<td>uniform random</td>
+<td>15</td>
+<td>0.56</td>
+<td>13.01</td>
+<td>0.7</td>
+<td>15.5</td>
+<td>0.32</td>
+</tr>
+<tr>
+<td>tornado</td>
+<td>13</td>
+<td>0.8</td>
+<td>12</td>
+<td>0.8</td>
+<td>13.09</td>
+<td>0.44</td>
+</tr>
+<tr>
+<td>neighbor</td>
+<td>13</td>
+<td>0.8</td>
+<td>12</td>
+<td>0.8</td>
+<td>13.99</td>
+<td>0.44</td>
+</tr>
+</tbody></table>
+<p><img src="/../images/Lab2_report/CFG2.png" class="lazyload" data-srcset="/../images/Lab2_report/CFG2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="CFG2"></p>
+<p>上图是配置2——等效对半带宽的试验结果。</p>
+<table>
+<thead>
+<tr>
+<th>TrafficPattern&#x2F;Zero Load Latency(L0); 饱和点δ</th>
+<th>Mesh</th>
+<th>Mesh</th>
+<th>FB</th>
+<th>FB</th>
+<th>HR</th>
+<th>HR</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>L0</td>
+<td>δ</td>
+<td>L0</td>
+<td>δ</td>
+<td>L0</td>
+<td>δ</td>
+</tr>
+<tr>
+<td>uniform random</td>
+<td>15</td>
+<td>0.56</td>
+<td>43.13</td>
+<td>0.16</td>
+<td>10.5</td>
+<td>0.68</td>
+</tr>
+<tr>
+<td>tornado</td>
+<td>13</td>
+<td>0.8</td>
+<td>42.07</td>
+<td>0.2</td>
+<td>8.99</td>
+<td>≥1</td>
+</tr>
+<tr>
+<td>neighbor</td>
+<td>13</td>
+<td>0.8</td>
+<td>42.07</td>
+<td>0.2</td>
+<td>8.99</td>
+<td>≥1</td>
+</tr>
+</tbody></table>
+<h2 id="6-分析与讨论"><a href="#6-分析与讨论" class="headerlink" title="6. 分析与讨论"></a>6. 分析与讨论</h2><h3 id="6-1-配置1：等效链路宽度"><a href="#6-1-配置1：等效链路宽度" class="headerlink" title="6.1 配置1：等效链路宽度"></a>6.1 配置1：等效链路宽度</h3><ul>
+<li>QA.1: 哪种拓扑结构提供了最低的零注入延时？为什么？</li>
+</ul>
+<p>Flattened Butterfly拓扑结构在三种Traffic Pattern情况下的零注入延时均最低。</p>
+<p>在三种拓扑的每个通道均为32-bits宽的情况下，序列化延迟均相同（2个cycle).  影响包的不同延迟的主要因素是源-目的节点之间的跳数。 而F-B在source node-&gt;destination node之间提供了最多2跳的通道，如果只讨论uniform_random情况下的平均跳数，则F-B是1.5；   Mesh的平均跳数是2.5；  H-R的平均跳数是3.75</p>
+<ul>
+<li>QA.2: 哪种拓扑结构提供了最高的吞吐量？为什么？</li>
+</ul>
+<p>Flattened Butterfly提供了最高的吞吐量。</p>
+<p>计算三种拓扑结构的理想情况（包之间无竞争、完美路由、没有堵塞）下的吞吐量的公式为：<br>$$<br>\Theta &#x3D; \frac{b}{\gamma_{max}} , b表示单通道带宽，\gamma_{max}表示最大通道负载，\Theta表示理想吞吐量<br>$$<br>设单通道相对带宽为1，则理想吞吐量是最大通道负载的相反数。</p>
+<p>对于4*4 Mesh，最大通道负载是1，因此理想吞吐量是1，而从图中可见当注入率在0.56时Mesh网络就已经达到饱和，这是因为采用的XY路由算法的平衡复杂能力很差，随着注入率的增加，很快就因竞争而饱和。</p>
+<p>对于4*4 F-B，最大通道负载也是1，理想吞吐量因此也是1，从图中可见当注入率在0.7时F-B网络才饱和。这是F-B结构为每对源-目的节点提供了跳数最多为2的近似专用的通道所带来的的最大收益。对于处于同一维度（X或Y)上的src node——dst node来说，它们之间只有1跳，相当于是为同一维度上的每对源-目的节点都提供了一条专用通道，因此竞争的情况大大减少。对于不同维度上的src node—–dst node来说，也只有2跳，同样会减少不同包对于同一链路资源的竞争。</p>
+<p>对于4*4 H-R，最大通道负载是2，因此理想吞吐量是0.5， 从图中可见当注入率在0.32时达到饱和。同样的，注入率接近实际饱和点时，产生了竞争情况，导致实际的吞吐量小于理想情况下的吞吐量。</p>
+<ul>
+<li>QA.3: 在neighbor模式下，三种拓扑结构的低注入延时相等吗？为什么？</li>
+</ul>
+<p>neighbor模式下，注入一个节点的包会被发送到该节点右边的相邻节点。理论上三种拓扑结构的低注入延时不同。</p>
+<p>对F-B，每个节点与其右边的相邻节点之间都有一个直接相连的通道。平均跳数为1，延迟最低。 </p>
+<p>对Mesh， 最右边一列的节点需要向左边走，经过3跳才能到达其相邻右侧节点。</p>
+<p>对H-R，每个第一级Ring的右侧节点作为源节点时，都需要跨过中间的L2Ring才能到达目的节点，因此延迟时间最长。</p>
+<p>从实验数据看延迟大小关系也确实如此。</p>
+<ul>
+<li>QA.4: 如果交通模式固定为Tornado， 如何改进Flattened Butterfly，使得它所提供的延时和吞吐量不变的情况下，减少总链路数量？</li>
+</ul>
+<p>在4*4的拓扑结构下，Tornado与Neighbor等价，目的节点均为源节点的右侧相邻节点。显然，在这种Pattern下，Y方向的链路没有被使用。因此Y方向不必放置如此多的旁路通道，只需要Like Mesh保证功能正确即可。</p>
+<p>首先设置注入率为0.1 Traffic Pattern &#x3D; Uniform_Random    试验结果如下：</p>
+<p>平均包延时： 修改前：13.1   修改后： 14.1</p>
+<p>然后保持注入率为0.1  Traffic Pattern改为Tornado  试验结果如下：</p>
+<p>平均包延时：  修改前：12     修改后：  12</p>
+<p>可见修改前后，对于tornado模式来说，性能保持不变。而Y方向的总链路数减少了，进而导致对于uniform random模式来说，修改后的网络性能有所下降。</p>
+<h3 id="6-2-配置2：等效对半带宽"><a href="#6-2-配置2：等效对半带宽" class="headerlink" title="6.2 配置2：等效对半带宽"></a>6.2 配置2：等效对半带宽</h3><ul>
+<li>QB.1: 哪个拓扑结构提供了最低的零注入延时？为什么？</li>
+</ul>
+<p>H-R提供了最低的零注入延时。因为在等效对半带宽的限制条件下，H-R的链路宽度为64-bits，使得序列化时间只有1 cycle，而Mesh的宽度为32-bits, 序列化时间是2 cycles，F-B的宽度为8-bits，序列化时间为8 cycles</p>
+<ul>
+<li><p>QB.2: 那个拓扑结构提供了最高的吞吐量？为什么？</p>
+<p>还是H-R  对于Neighbor&#x2F;Tornado模式来说，注入某个节点的包的终点是该节点的右侧相邻节点，而H-R的链路带宽足够大，因此从结果看似乎没有发生竞争。对于Uniform_Random则会发生竞争，但饱和点很大。至于F-B，则显然是由于链路宽度太小(8-bits)，根据理想吞吐量的计算公式，可以推出其饱和点很小。</p>
+</li>
+<li><p>QB3: 每种拓扑结构的链路宽度是多少？回忆网络延时的公式，链路宽度主要影响延时的哪个因素？</p>
+</li>
+</ul>
+<p>Mesh: 32-bits F-B: 8-bits H-R: 64-bits</p>
+<p>链路宽度主要影响序列化时间。</p>
+<ul>
+<li>Q4.B:  假定Mesh和F-B具有相同的路由器延时t_r.  在给定uniform_random模式下，如果想使得F-B比Mesh的低注入包延时更低，t_r的最小值是多少？提示：可以在仿真时改变t_r</li>
+</ul>
+<p>根据包延时公式：<br>$$<br>T_{zeroload}&#x3D;(H_{avg}+1)*t_{router}+(H_{avg}+2)t_{wire}+T_{ser}<br>$$<br>Mesh的平均跳数是2.5，F-B的平均跳数是1.5  因此t_r越大，Mesh的延时增长的更快。可以在每次仿真前增加t_r，找到两种拓扑结构的低注入延时交叉点，即为所求。</p>
+<p>设置t_r从1开始，每次仿真前加1，实验发现当t_r增加到50时，Mesh的延时仍未超过F-B 并且Mesh延时缓慢增加，斜率为4.5，而F-B的延时在t_r较小时缓慢增加，斜率为10.    当t_r大到一定程度后，开始迅速增加。如下图所示：</p>
+<p><img src="/../images/Lab2_report/t_r1.png" class="lazyload" data-srcset="/../images/Lab2_report/t_r1.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="TR1"></p>
+<p>两种拓扑结构的延时随路由器延时线性增加的原因是在延时的公式中路由器延时前的系数是常数</p>
+<p>但斜率与理论不符。Mesh的理论斜率应为3.5，实际是4.5     F-B的理论斜率是2.5 实际是10</p>
+<p>另一个问题是F-B的延时在后半段迅速增加，或许是由包之间的竞争导致的。</p>
+<p>为控制变量，将F-B的链路宽度分别设置为32-bits，得到以下结果。</p>
+<p><img src="/../images/Lab2_report/t_r2.png" class="lazyload" data-srcset="/../images/Lab2_report/t_r2.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="t2"></p>
+<p>F-B的链路位宽为16-bits时，斜率为3.5    为32-bits时，斜率为4.5   但上述公式中F-B的延时斜率理论值为2.5</p>
+<p>说明延迟公式中应该还存在一些其他造成延时增加的因素。实际的包延时包括了因为竞争而产生的延时， 而上述延迟公式是零注入延迟的计算公式，即所有包都没有发生竞争时的公式。注意在这两次实验中我们设置注射率为0.02 packets&#x2F;cycle&#x2F;node  即对于每个节点来说，平均50个cycle向其中注入1个packet    对于8-bits的链路宽度，将一个包序列化需要8个cycle, 平均跳数为1.5，相邻路由器之间的链路延迟为1， 则公式中第二项连线上的延迟为3.5 cycles       当路由器延时增大到15时，零注入延迟为50；   继续增加路由器延时，当向某个节点注入包时，上次注入该节点的包还没有到达目的节点。   当路由器延时增大到35时，零注入延迟约为100，此时显然由于注入包的频率过高（此时0.02的注入率已经不再可以近似为零注入），导致注入的包发生了竞争。因此从t_r &#x3D; 35开始包延时大幅增加。  可以预见，如果减少注入率，在t_r &#x3D; 35之后的曲线斜率应该会减小。</p>
+<p>为此减小注入率，观察结果：</p>
+<p><img src="/../images/Lab2_report/t_r3.png" class="lazyload" data-srcset="/../images/Lab2_report/t_r3.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="tr3"></p>
+<p>当减少注入率到0.01时，消除了因注入包之间的竞争而剧烈增加的延时。但是斜率仍然是10左右，与零注入延时公式中的理论斜率——2.5不符，可能是由于仍存在竞争，导致斜率高于理论值。为此继续减少注入率到0.001，观察斜率。 实验结果表明斜率仍然是10左右，说明斜率超过理论值的主要原因不是竞争。</p>
+<p>总结一下，在竞争可忽略的情况下，F-B的网络延时增长速度随着链路宽度的减小而增加：</p>
+<p>link width &#x3D; 32    —-&gt;  斜率 &#x3D; 3.5</p>
+<p>link width &#x3D; 16    —-&gt;  斜率 &#x3D; 4.5</p>
+<p>link width &#x3D; 8      —-&gt;  斜率 &#x3D; 10</p>
+<p>最后总结一下本问题。 按照理论公式，随着路由器延时的增加，Mesh因为平均跳数更多，因此理论上最终其延时会超过Flattened Butterfly，但实际做实验后没有出现预期效果。在排除了因注入率偏高导致注入包之间的竞争问题后，发现当F-B的链路宽度小于32-bits时，其网络延时增长速度仍然高于Mesh，尚未知晓原因。</p>
+<h2 id="7-实验结论"><a href="#7-实验结论" class="headerlink" title="7. 实验结论"></a>7. 实验结论</h2><p>本实验主要学习了在gem5中对NoC的拓扑结构进行建模的方法。学习了Flattened Butterfly NoC拓扑结构，认识到了不同的拓扑结构对于NoC性能（延时）的影响。最后一个问题中的实验现象还不知道如何解释，有待以后思考。</p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2022/10/25/Lab2_report/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-10-25T21:44:21+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年10月25日</p>
+  </a>
 </div>
 
-          </div>
         
       
+        
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
     
-  </section>
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://zifengzhao.github.io/2022/10/25/Lab2_report/&title=Topology Comparison - KimFang's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zifengzhao.github.io/2022/10/25/Lab2_report/&title=Topology Comparison - KimFang's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://zifengzhao.github.io/2022/10/25/Lab2_report/&title=Topology Comparison - KimFang's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" class="lazyload" data-srcset="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
-    
+  
+
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
   
 
 
-	
+  <article class="post white-box shadow floatable blur" id="comments">
+    <span hidden>
+      <meta itemprop="discussionUrl" content="/2022/10/25/Lab2_report/index.html#comments">
+    </span>
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
+    
+
+    <div id="layoutHelper-comments"></div>
+
+  </article>
+
+
+
+
+
+
 </div>
 <aside id='l_side' itemscope itemtype="http://schema.org/WPSideBar">
   
@@ -2397,97 +2738,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://s1.vika.cn/space/2022/09/08/d9fef370605a4500907cd05eaa2a05cd'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>淡定哥</h2>
-        
-        
-          <p><a href="mailto:&#50;&#x32;&#x31;&#x31;&#50;&#48;&#50;&#48;&#x30;&#x36;&#x36;&#64;&#x6d;&#46;&#x66;&#117;&#x64;&#97;&#x6e;&#46;&#x65;&#100;&#x75;&#x2e;&#99;&#x6e;">&#50;&#x32;&#x31;&#x31;&#50;&#48;&#50;&#48;&#x30;&#x36;&#x36;&#64;&#x6d;&#46;&#x66;&#117;&#x64;&#97;&#x6e;&#46;&#x65;&#100;&#x75;&#x2e;&#99;&#x6e;</a></p>
-
-        
-        
-          <p><span id="jinrishici-sentence">KimFang's Blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="https://github.com/ZiFengZhao/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/NoC/" href="/categories/NoC/"
-            active-action="action-categoriesNoC"
-            ><div class='name'>NoC</div><div class='badge'>(1)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-
-    
-  
-
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84"><span class="toc-text">1. 实验目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%9E%E9%AA%8C%E5%8E%9F%E7%90%86"><span class="toc-text">2. 实验原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Flattened-Butterfly"><span class="toc-text">2.1 Flattened Butterfly</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Hierarchical-Ring"><span class="toc-text">2.2 Hierarchical Ring</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="toc-text">3. 实验内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Traffic-Description"><span class="toc-text">3.1 Traffic Description</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E5%AE%9E%E9%AA%8C%E6%96%B9%E6%B3%95"><span class="toc-text">3.2 实验方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AE%9E%E9%AA%8C%E8%BF%87%E7%A8%8B"><span class="toc-text">4. 实验过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-GARNET-%E6%8B%93%E6%89%91%E7%BB%93%E6%9E%84%E5%BB%BA%E6%A8%A1%E6%96%B9%E6%B3%95"><span class="toc-text">4.1 GARNET 拓扑结构建模方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-Flattened-Butterfly-modeling"><span class="toc-text">4.2 Flattened Butterfly modeling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-Hierarchical-Ring-Modeling"><span class="toc-text">4.3 Hierarchical Ring Modeling</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-%E4%BB%BF%E7%9C%9F%E8%84%9A%E6%9C%AC"><span class="toc-text">4.4 仿真脚本</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E8%AF%95%E9%AA%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">5. 试验结果</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%A8%E8%AE%BA"><span class="toc-text">6. 分析与讨论</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-%E9%85%8D%E7%BD%AE1%EF%BC%9A%E7%AD%89%E6%95%88%E9%93%BE%E8%B7%AF%E5%AE%BD%E5%BA%A6"><span class="toc-text">6.1 配置1：等效链路宽度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-%E9%85%8D%E7%BD%AE2%EF%BC%9A%E7%AD%89%E6%95%88%E5%AF%B9%E5%8D%8A%E5%B8%A6%E5%AE%BD"><span class="toc-text">6.2 配置2：等效对半带宽</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E5%AE%9E%E9%AA%8C%E7%BB%93%E8%AE%BA"><span class="toc-text">7. 实验结论</span></a></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2515,13 +2807,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </aside>
 
 
+
           <!--此文件用来存放一些不方便取值的变量-->
 <!--思路大概是将值藏到重加载的区域内-->
 
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2530,14 +2823,14 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="half";
-      cover_wrapper.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
       scroll_down.style.display="none";
     
   
@@ -3078,7 +3371,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/","sameAs":["https://github.com/volantis-x"],"description":"用来记录学习心得"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://ZiFengZhao.github.io/","name":"KimFang's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://ZiFengZhao.github.io/archives/","name":"Archive"}},{"@type":"ListItem","position":3,"item":{"@id":"https://ZiFengZhao.github.io/archives/2022/","name":"2022年"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","keywords":"Computer Architecture, Network on Chip(NoC)","description":"用来记录学习心得","author":{"@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/","description":"用来记录学习心得"},"publisher":{"@type":"Organization","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://ZiFengZhao.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"用来记录学习心得","inLanguage":["zh-CN","en","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/"},"publisher":{"@type":"Organization","name":"KimFang's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/","sameAs":["https://github.com/volantis-x"],"description":"用来记录学习心得"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://ZiFengZhao.github.io/","name":"KimFang's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://ZiFengZhao.github.io/categories/NoC/","name":"NoC"}},{"@type":"ListItem","position":3,"item":{"@id":"https://ZiFengZhao.github.io/2022/10/25/Lab2_report/","name":"Topology Comparison"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","keywords":"Computer Architecture, Network on Chip(NoC)","description":"用来记录学习心得","author":{"@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/","description":"用来记录学习心得"},"publisher":{"@type":"Organization","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://ZiFengZhao.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Topology Comparison","description":"用来记录学习心得","inLanguage":["zh-CN","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://zifengzhao.github.io/2022/10/25/Lab2_report/"},"author":{"@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/"},"publisher":{"@type":"Organization","name":"KimFang's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://zifengzhao.github.io/2022/10/25/Lab2_report/","wordCount":0,"datePublished":"2022-10-25T13:09:53.719Z","dateModified":"2022-10-25T13:44:21.183Z","articleSection":"NoC","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
