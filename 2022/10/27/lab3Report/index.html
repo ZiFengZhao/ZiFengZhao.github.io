@@ -5,8 +5,8 @@
   <meta name="Volantis" content="5.7.6">
   <meta charset="utf-8">
   <!-- SEO相关 -->
-  <meta name="robots" content="index,follow">
-  <link rel="canonical" href="https://ZiFengZhao.github.io/"/>
+  
+  <link rel="canonical" href="https://ZiFengZhao.github.io/2022/10/27/lab3report/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -32,17 +32,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>KimFang's Blog</title>
+  <title>Deadlock Freedom - KimFang's Blog</title>
   <meta name="keywords" content="Computer Architecture, Network on Chip(NoC)">
   <meta desc name="description" content="用来记录学习心得 - ZiFeng Zhao - KimFang's Blog">
   
-<meta property="og:type" content="website">
-<meta property="og:title" content="KimFang&#39;s Blog">
-<meta property="og:url" content="https://zifengzhao.github.io/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deadlock Freedom">
+<meta property="og:url" content="https://zifengzhao.github.io/2022/10/27/lab3Report/index.html">
 <meta property="og:site_name" content="KimFang&#39;s Blog">
-<meta property="og:description" content="用来记录学习心得">
+<meta property="og:description" content="1. 实验目的本实验在gem5 GARNET 3.0 模型中能够测量NoC是否存在死锁；以及通过Turn模型、Escape VC两种方式消除NoC中的死锁。 2. 实验原理NoC产生死锁的根本原因是资源发生了循环依赖。对于以flit为传输单位的网络来说，这里的资源是指（虚拟）通道。死锁会造成传输的数据包永远无法到达目的节点。解决这一问题有两种思路：避免死锁；允许出现死锁但需要在发生死锁时有检测与恢">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+<meta property="article:published_time" content="2022-10-26T16:00:00.000Z">
+<meta property="article:modified_time" content="2022-10-27T13:22:24.351Z">
 <meta property="article:author" content="ZiFeng Zhao">
 <meta property="article:tag" content="Computer Architecture, Network on Chip(NoC)">
 <meta name="twitter:card" content="summary">
@@ -2049,7 +2051,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <!-- Custom Files bodyBegin begin-->
     
     <!-- Custom Files bodyBegin end-->
-    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur " style='opacity: 0' >
+    <header itemscope itemtype="http://schema.org/WPHeader" id="l_header" class="l_header auto shadow floatable blur show" style='opacity: 0' >
   <div class='container'>
   <div id='wrapper'>
     <div class='nav-sub'>
@@ -2214,7 +2216,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="full" class='cover-wrapper  search' style="display: ;">
+      <div id="none" class='cover-wrapper post search' style="display: none;">
         
   <div class='cover-bg' style='background-image:url(https://raw.githubusercontent.com/ZiFengZhao/PicsBed/main/cat.jpg)'></div>
 
@@ -2270,7 +2272,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   </div>
 </div>
 
-        <div id="scroll-down" style="display: ;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
+        <div id="scroll-down" style="display: none;"><i class="fa fa-chevron-down scroll-down-effects"></i></div>
       </div>
     
   
@@ -2280,29 +2282,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  
-  <section class="post-list">
-    
-      
-        
-          
-        
-          
-        
-          
-        
-        
-          
-        
-          
-        
-      
-    
-    
-      
-        
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
   <link itemprop="mainEntityOfPage" href="https://zifengzhao.github.io/2022/10/27/lab3Report/">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="KimFang's Blog">
@@ -2312,151 +2292,285 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <meta itemprop="description" content="用来记录学习心得">
   </span>
   
-  
+
+
   
     <span hidden>
       <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
     </span>
   
-  
+  <div class="article-meta" id="top">
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/10/27/lab3Report/"  itemprop="url">
+    
+    
+      <h1 class="title" itemprop="name headline">
         Deadlock Freedom
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
+      </h1>
+      <div class='new-meta-box'>
+        
+          
+            
+<div class='new-meta-item author' itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <a itemprop="url" class='author' target="_blank" href="https://github.com/ZiFengZhao.git" rel="nofollow noopener">
+    <img itemprop="image" src="">
+    <p itemprop="name">ZiFeng Zhao</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+  <div class='new-meta-item category'>
+    <i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i>
+    <a class="category-link" href="/categories/Computer-Architecture/">Computer Architecture</a><span class="sep"></span><a class="category-link" href="/categories/Computer-Architecture/NoC/">NoC</a>
     
-      
-        1. 实验目的本实验在gem5 GARNET 3.0 模型中能够测量NoC是否存在死锁；以及通过Turn模型、Escape VC两种方式消除NoC中的死锁。
-2. 实验原理NoC产生死锁的根本原因是资源发生了循环依赖。对于以flit为传输单位的网络来说，这里的资源是指（虚拟）通道。死锁会造成传输的数据包永远无法到达目的节点。解决这一问题有两种思路：避免死锁；允许出现死锁但需要在发生死锁时有检...
-      
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Computer-Architecture/" itemprop="url"><span itemprop="name">Computer Architecture</span></a>
+      </span>
+    
+      <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
+        <a href="/categories/Computer-Architecture/NoC/" itemprop="url"><span itemprop="name">NoC</span></a>
+      </span>
     
   </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/ZiFengZhao.git'><img src=''></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="">
-            <meta itemprop="name" content="ZiFeng Zhao">
-            <meta itemprop="url" content="https://github.com/ZiFengZhao.git">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-10-27T00:00:00+08:00">2022-10-27</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Computer-Architecture/">Computer Architecture</a><span class="sep"></span><a class="category-link" href="/categories/Computer-Architecture/NoC/">NoC</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Computer-Architecture/" itemprop="url"><span itemprop="name">Computer Architecture</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Computer-Architecture/NoC/" itemprop="url"><span itemprop="name">NoC</span></a>
-            </span>
+
+
           
         
+          
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2022-10-27T00:00:00+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
+    <p>发布于：2022年10月27日</p>
+  </a>
+</div>
+
+          
+        
+          
+            
+
+
+
+          
+        
+        <!-- Custom Files topMeta begin-->
+        
+        <!-- Custom Files topMeta end-->
       </div>
+    
+  </div>
+
+
+  <div id="layoutHelper-page-plugins"></div>
+  <div id="post-body" itemprop="articleBody">
+    <h2 id="1-实验目的"><a href="#1-实验目的" class="headerlink" title="1. 实验目的"></a>1. 实验目的</h2><p>本实验在gem5 GARNET 3.0 模型中能够测量NoC是否存在死锁；以及通过Turn模型、Escape VC两种方式消除NoC中的死锁。</p>
+<h2 id="2-实验原理"><a href="#2-实验原理" class="headerlink" title="2. 实验原理"></a>2. 实验原理</h2><p>NoC产生死锁的根本原因是资源发生了循环依赖。对于以flit为传输单位的网络来说，这里的资源是指（虚拟）通道。死锁会造成传输的数据包永远无法到达目的节点。解决这一问题有两种思路：避免死锁；允许出现死锁但需要在发生死锁时有检测与恢复机制处理处于死锁状态的数据包。避免死锁一般也分两种思路：在路由算法层面消除死锁——如Turn模型；在流量控制层面消除死锁——如添加Escape VC，使数据包可以通过逃逸通道离开发生循环依赖的原通道。</p>
+<h2 id="3-实验内容"><a href="#3-实验内容" class="headerlink" title="3. 实验内容"></a>3. 实验内容</h2><h3 id="3-1-死锁检测"><a href="#3-1-死锁检测" class="headerlink" title="3.1 死锁检测"></a>3.1 死锁检测</h3><p>分别对于以下三种Traffic Pattern: Uniform Random; Bit Complement; Tornado，确定以下两种路由算法：XY; random_oblivious的峰值吞吐率。</p>
+<p>网络均采用8 * 8的Mesh网络。仿真周期为20000；每层虚拟网络有4个虚拟通道。XY算法即先X后Y. 这里的random_oblivious是指最小随机路由算法，即随机选择一条起始与终点节点之间的最小路径，而不考虑网络堵塞情况。例如(0,0)—&gt;(2,1)，有(0,0)-&gt;(1,0)-&gt;(2,0)-&gt;(2,1); (0,0)-&gt;(1,0)-&gt;(1,1)-&gt;(2,1); (0,0)-&gt;(0,1)-&gt;(1,1)-&gt;(2,1)三种最短路径，该算法随机选择其中一种路径作为路由。显然这种路由算法会死锁出现。</p>
+<p>定义：</p>
+<ul>
+<li>接收率：(packets&#x2F;node&#x2F;cycle)，每个周期每个节点所接收的平均数据包数量。</li>
+<li>峰值吞吐率：该网络配置提供的最大接收率。</li>
+</ul>
+<p>在测量不同Traffic Pattern; 不同路由算法配置下的网络峰值吞吐率时，对于XY算法来说，由于不会发生死锁，随着注入率的增加，接收率会逐渐增加，最后在注入率的饱和点达到饱和，不再增加。为方便测量，可以直接设置注入率为1，此时必然饱和，测量网络所有节点接收到的数据包总数即可算出最大接收率，即峰值吞吐率。 而对于random_oblivious算法来说，由于会发生死锁，随着注入率的增加，接收率先会逐渐增加，当注入的包的数量到达一定程度后，网络中开始出现死锁，占用虚拟通道资源；继续增加注入率，死锁越来越多，最后虚拟通道资源基本全部被占用，之后继续仿真也不会有数据包被接收，接收率降为0.   因此对于会发生死锁的路由算法来说，近似认为最大接收率出现在恰好发生死锁之前的注入率点上。在gem5的模拟过程中，如果发生了死锁，会报错。因此可以逐渐增加注入率到恰好不发生死锁时，测量此时的接收率。</p>
+<h3 id="3-2-使用Turn-model避免死锁"><a href="#3-2-使用Turn-model避免死锁" class="headerlink" title="3.2 使用Turn model避免死锁"></a>3.2 使用Turn model避免死锁</h3><p>设定在GARNET中通过使用North-last Turn Model避免死锁。设定路由算法是random_oblivious. （路由算法实现在src&#x2F;mem&#x2F;ruby&#x2F;network&#x2F;garnet&#x2F;RoutingUnit.cc中）。要求实现函数 outportComputeTurnModelOblivious() （提示：类似的可供参考的路由算法实现函数有outportComputeXY()和outportComputeRandomOblivious() </p>
+<p>实现路由函数后可在命令行中指定–routing-algorithm&#x3D;turn_model_oblivious设置路由算法</p>
+<p>North-last Model示意如下：</p>
+<p><img src="/../images/lab3Report/northlast.png" alt="North last"></p>
+<p>North-last Turn不存在N-&gt;W&#x2F;E的Turn.</p>
+<p>&#x3D;&#x3D;补充题&#x3D;&#x3D; ： 将路由算法从random_oblivious改为自适应最小路由算法，实现North-last Turn Model. 这里的自适应最小路由算法内容是：当路由器正在选择输出端口时，将所有最小路径上的下一个路由器的输入端的空闲VC数量作为优先级选择输出端口。如果存在多个相同最大输入VC数的情况，则在其中随机选择一个。（提示：可以参考has_free_vc()和select_free_vc()函数）</p>
+<h3 id="3-3-使用Escape-VC避免死锁"><a href="#3-3-使用Escape-VC避免死锁" class="headerlink" title="3.3 使用Escape VC避免死锁"></a>3.3 使用Escape VC避免死锁</h3><p>提示：可以参考has_free_vc()和select_free_vc()函数，它们位于OutputUnit.cc中。这些函数在SwitchAllocator.cc中被调用。</p>
+<h2 id="4-实验过程"><a href="#4-实验过程" class="headerlink" title="4. 实验过程"></a>4. 实验过程</h2><p>对于采用North-last Turn的自适应最短路径路由算法来说，如果只有一条最短路径，则无论该路径上的交通情况都选择该路径。如果有几条最短路径，例如目的节点在当前节点的东南方向，有两种最短路径：先南后东 以及 先东后南。 将这两条路径作为候选路径，进一步考察每个路径对应的输出端口上有多少个空闲的vc，选出空闲vc数最多的输出端口。</p>
+<p>因此该算法分为两步：</p>
+<p>step1: 选出所有可能的最短路径。设目的节点与当前节点的相对方向为relDir.  如果relDir &#x3D; E, N, W, S，只有一条最短路径。 如果relDir &#x3D; EN, North-last Turn规定只能先E后N,  如果relDir &#x3D; NW, 只能先W后N,  如果relDir &#x3D; WS, 有两条最短路径：先W后S或先S后W，  如果relDIr &#x3D; SE, 有两条最短路径：先S后E或先E后S.  step2: 如果relDir &#x3D; WS&#x2F;SE，计算每个输出端口的free vc数量进而选出相应输出端口。在OutputUnit.hh中添加 countFreeOutvc(int vnet, int outport) 函数用于计算给定网络、给定输出端口的free outvc数量。</p>
+<p>相比于oblivious的minimal routing来说，adaptive算法需要注意的点是它需要考虑所计算的当前的数据包在哪层网络上，只有确定了数据包的网络位置，才能去看输出端口的free outvc数量。而数据包的网络位置信息可以从RouteInfo中获取。对于oblivious来说，它只用到了RouteInfo中的目的节点位置信息，而adaptive不仅需要利用该信息，还需要额外使用vnet（所在网络层）信息。</p>
+<p>minimal adaptive routing with north-last turn算法在RoutingUnit.cc的outportComputeTurnModelAdaptive.</p>
+<p>对于采用Escape VC的随机最短路径路由算法来说，题目设定了每层网络拥有4个虚拟通道，我们可以将vc0作为逃离通道，其他三个vc都采用oblivious minimal path routing算法。vc0作为逃离通道，要保证数据包进入vc0一定可以避免死锁最简单的方法是vc0中采用XY算法。我们需要考虑一个数据包应该何时进入逃离通道？可以在检测到死锁发生时（检测方法可以是设置一个死锁阈值，当一个数据包从源节点发出时开始计数，到达目的节点清0，数据包每次移动一个Hop，位于数据包中的计数器加1，如果超过死锁阈值，则认为死锁，如果此时这个数据包所在的节点的逃离通道空闲，则进入逃离通道，如果不空闲，则等到它空闲下来再进入逃离通道。）让数据包进入逃离通道。  也可以在每次allocate  outvc时采用round-robin 方式，这样会使数据包可能还没发生死锁就提前进入逃离通道。当数据包进入逃离通道后，可以让其一直在逃离通道中传输，直到到达目的节点；也可以让其在之后重新回到其他三个通道中。直观角度看，前者的throughput会低于后者，因为1. XY算法没有Path Diversity，吞吐率低于oblivious算法。 2. 只有1个逃离通道，相比于3个普通通道，数据包进入逃离通道后更容易堵塞。而进入普通通道后，每次allocate outvc时有4个vc可供选择（包括逃离通道），因此直观上看因堵塞造成的延迟应该更低。</p>
+<p>为了算法易于实现，我们设定每次采用一定通道优先级的方式分配4个Outvc（包括逃离通道）。(这也是gem5的 &#x3D;&#x3D;selct_free_vc&#x3D;&#x3D; 函数所采用的outvc分配方式。该函数根据给定的网络层号，从小到大依次考察该网络层中的所有Outvc状态是否空闲，例如网络层0给定，依次考察vc0,vc1,vc2,vc3.  如果vc0不空闲，vc1空闲，则选择vc1. )   当某条普通通道发生死锁后，数据包总可以在有限时间内进入其他空闲通道。在最坏情况中，该网络层的输出端口的三条普通通道全部发生死锁，逃离通道尽管可能堵塞，但总可以在有限时间之后重新空闲，因此数据包总是可以进入逃离通道。如果将0通道设为逃离通道，则每次会优先选择逃离通道，而逃离通道采用XY算法，吞吐率低于普通通道，因此可以将选择优先级最低的3号通道设为逃离通道. 这里需要做实验验证逃离通道的优先级不同是否会影响吞吐率。</p>
+<p>修改：上面一段思路是设置一个采用XY算法的逃离通道，但这样有问题。首先介绍一下GARNET的Switch Allocator过程。</p>
+<p>在GARNET模型中，Switch Allocator在第一阶段遍历考察该路由器的每个输入端口。根据当前考察的输入端口号，按照round robin的方式（round robin出来的最高优先级的vc由Switch Allocator上一次进行仲裁的第二阶段设定，设定方式是上一次Switch Allocator的仲裁第一阶段中所选择出来的round robin winner的下一个invc;  例如对于输入端口“East”来说，假设上一次Switch Allocator的仲裁第一阶段选择的invc是1号vc，则上一次Switch Allocator的仲裁第二阶段设定的本次具有最高优先级的是vc2.  ）首先考察作为round robin 最高优先级的invc, 根据所考察的invc号，对给定的输入端口号和给定的invc号采用一定的&#x3D;&#x3D;路由算法&#x3D;&#x3D; ，获得输出端口号。然后根据计算出的输出端口号和上一次设置的outvc判断是否允许向该输出端口发送flit. 如果允许发送，则将该输出端口号设为当前所考察的输入端口号在第二阶段所发送flit的唯一输出端口号，将该invc号作为本轮仲裁的round robin winner.  然后结束对vc的考察。 如果不允许发送，则继续考察该invc的下一个invc. 如果当前考察的输入端口号的4个invc都没有赢得本轮仲裁，即它们中的flit都不能在Switch Allocator的下一阶段发送给相应的outvc，则会在下一次SA的第一轮仲裁阶段重新考察该输入端口号是否有invc可以赢得仲裁，发送flit. 考察完成一个输入端口后还会考察下一个输入端口，应该需要考察5个输入端口——东西南北和本地。显然经过第一轮仲裁后，可能出现两个不同的输入端口都允许向同一个输出端口发送flit的情况。这就需要第二阶段的仲裁。</p>
+<p>Switch Allocator的第二阶段遍历考察该路由器的每个输出端口。根据当前考察的输出端口号，按照round robin的方式首先选出最高优先级的输入端口号，考察该输入端口是否允许向该输出端口发送flit. 如果不允许，考察下一个输入端口。如果允许，则通过判断该invc所对应的上一次的outvc是否是-1（如果是-1，说明上一次的flit是Head或Head_Tail，如果不是-1，说明上一次flit是Body）。如果上一次flit是body，本次flit不需要分配outvc，只需要沿着上一次outvc走即可。如果是 head或head_tail，则需要为本次flit在输出端口处分配一个空闲的outvc. （这里分配方式是按照outvc的编号有小到大的优先级分配的，例如outvc0空闲，则分配outvc0， 如果outvc0不空闲，Outvc1空闲，则分配outvc1. ）分配outvc后就可以向该outvc发送flit并减少该outvc的credit了。此外还需要向invc的Upstream路由器发送增加credit的信号。然后停止对当前的输出端口的考察，继续考察下一个输出端口。</p>
+<p>回来原文，上面的思路问题在于所设置的逃离通道只采用了XY算法，而普通网络采用的是minimal oblivious算法。下面可能发生的场景会导致算法出错：一个数据包原先在普通通道中，在某个位于目的节点西南方向的节点中，根据minimal oblivious算法，有0.5的概率计算出来向北的输出端口。此时北输出端口恰好有空闲的outvc，于是它进入了Switch Allocator的第二个仲裁阶段。恰好第二个阶段将该数据包分配给了空闲的逃离通道，而此时目的节点在当前节点的东北方向，逃离通道采用的是XY算法，要求必须与目的节点的X坐标相同才可以转到Y方向，因此路由算法出错！</p>
+<p>一种比较简单的解决方法是设置两个逃离通道，通道1采用XY算法，通道2采用YX算法。当数据包位于普通通道时，根据minimal oblivious算法，如果选择了东西端口，则可以选择普通通道或通道1（不能选择通道2，即使此时通道2是空闲也不能，一旦在东西端口进入通道2，则不能转到南北方向，在最坏情况中，例如一个flit的源节点是00，目的节点是21，在00选择东端口的通道2，根据YX算法，在10节点计算出来的输出端口一定是东端口，可能又恰好进入通道2到达20，由于仍采用YX算法，因此继续向东到达30，而这就违反了最小路径）；如果选择了南北端口，则可以选择普通通道或通道2.   当数据包位于通道1时，根据XY算法，如果选了南北端口，可以选择三种通道，无论选择哪种通道，下一次计算出的输出端口一定是南北方向（因为是最小路径）；如果选择了东西端口，则只能选择普通通道或通道1，不能选择通道2，一旦在东西端口进入通道2，则不能转到南北方向（因为通道2是YX算法，进入X方向后计算出的输出端口方向一定是东西方向）。  数据包位于通道2时，根据YX算法，如果选了东西端口，可以选择三种通道；如果选了南北端口，则只能选择普通通道或通道2.</p>
+<p>我们设定vc0,vc1为普通通道，在选择空闲通道时具有更高的优先级，设定vc2为XY通道，设定vc3为YX通道。</p>
+<p>&#x3D;&#x3D;outportComputeEscapeVCOblivious&#x3D;&#x3D;函数首先需要判断输入该路由器的flit位于哪个通道。为此，需要修改&#x3D;&#x3D;route_compute&#x3D;&#x3D;函数的输入项，该函数最终调用了outportComputeEscapeVCOblivious函数。在输入参数中增加当前输入到该路由器的flit的相对通道号relative_vc.  由于选择outvc是在Switch Allocator的第二阶段，因此需要在该阶段设置一个专门的select函数，输入参数为相对通道号，以及第一阶段获得的输出端口方向（东西南北），在该函数中根据这两个参数选择合适的空闲通道。而&#x3D;&#x3D;outportComputeEscapeOblivious&#x3D;&#x3D;函数与其他的route计算函数一样，只输出一个outport. 交给位于SA第二阶段的&#x3D;&#x3D;select_free_vc_restrained&#x3D;&#x3D;函数选择相应的outvc.</p>
+<p>这个算法的&#x3D;&#x3D;局限&#x3D;&#x3D;在于：</p>
+<p>​    &#x2F;&#x2F; 在有些情况下，即使输出端口有空闲通道，也不允许将flit发送给这个空闲通道</p>
+<p>​    &#x2F;&#x2F; 情况汇总如下：</p>
+<p>​    &#x2F;&#x2F; 当数据包位于普通通道（invc0,invc1)时，如果输出端口是X方向，不允许将其输出到YX通道(outvc3)</p>
+<p>​    &#x2F;&#x2F; 当数据包位于普通通道（invc0,invc1)时，如果输出端口是Y方向，不允许将其输出到XY通道(outvc2)</p>
+<p>​    &#x2F;&#x2F; 当数据包位于XY通道（invc2)时，如果输出端口是X方向，不允许将其输出到YX通道(outvc3)</p>
+<p>​    &#x2F;&#x2F; 当数据包位于XY通道（invc2)时，如果输出端口是Y方向，可以输出到任意通道</p>
+<p>​    &#x2F;&#x2F; 当数据包位于YX通道（invc3)时，如果输出端口是X方向，可以输出到任意通道</p>
+<p>​    &#x2F;&#x2F; 当数据包位于YX通道（invc2)时，如果输出端口是Y方向，不允许将其输出到XY通道(outvc2)</p>
+<p>简单来说，对于EscapeVC算法来说，在很多情况下，某些输出虚拟通道是对Switch Allocator屏蔽的。</p>
+<p>之后这是一个改进方向。</p>
+<h2 id="5-实验结果"><a href="#5-实验结果" class="headerlink" title="5. 实验结果"></a>5. 实验结果</h2><h3 id="5-1-死锁检测"><a href="#5-1-死锁检测" class="headerlink" title="5.1 死锁检测"></a>5.1 死锁检测</h3><p>下表是各种交通模式和两种路由算法对应的峰值吞吐率</p>
+<table>
+<thead>
+<tr>
+<th>Traffic Pattern</th>
+<th>Peak Throughout with XY(packets&#x2F;node&#x2F;cycle)</th>
+<th>Peak Throughout with Random(packets&#x2F;node&#x2F;cycle)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Uniform Random</td>
+<td>0.152</td>
+<td></td>
+</tr>
+<tr>
+<td>Bit Complement</td>
+<td>0.054</td>
+<td></td>
+</tr>
+<tr>
+<td>Tornado</td>
+<td>0.120</td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="5-2-避免死锁"><a href="#5-2-避免死锁" class="headerlink" title="5.2 避免死锁"></a>5.2 避免死锁</h3><p><img src="/../images/lab3Report/UniformRandom-16668768079451.png" alt="Uniform Random"></p>
+<p>上图是在Uniform Random Pattern下接受率 vs 注入率的曲线。XY算法的吞吐率最高，而ObliviousEscape的吞吐率最低。说明在随机交通流量下，采用逃离通道避免死锁的性能反而最差。</p>
+<p><img src="/../images/lab3Report/Transpose-16668768405872.png" alt="Transpose"></p>
+<p>上图是Transpose Pattern下的接受率 vs 注入率曲线。可以看到，XY的吞吐率最低。Transpose模式即目的节点的xy坐标与源节点的xy坐标相反：dst_x &#x3D; src_y; dst_y &#x3D; src_x  XY算法要求先X后Y，不具备路径多样性。而其他三种算法的路径多样性高，因此在Transpose这种源-目的节点固定的模式下吞吐率大。对于uniform random这种随机交通模式，路径多样性对于网络堵塞的影响降低，而Escape通道算法中有些空闲通道在某些时候需要对数据包屏蔽，降低了通道利用率，因此Escape算法的吞吐率反而最低。 </p>
+
+  </div>
+  
+  
+    
+    <div class='footer'>
+       <!-- 参考资料、相关资料等 -->
       
-        <div>
-          <a class='readmore' href='/2022/10/27/lab3Report/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
+       <!-- 相关文章 -->
+      
+      <!-- 版权声明组件 -->
+      
+      <!-- 打赏组件 -->
       
     </div>
   
+  
+    
 
+
+  <div class='article-meta' id="bottom">
+    <div class='new-meta-box'>
+      
+        
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2022-10-27T21:22:24+08:00">
+  <a class='notlink'>
+    <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
+    <p>更新于：2022年10月27日</p>
+  </a>
 </div>
 
-          </div>
         
       
         
-          <div class='post-wrapper'>
-            <div class="post post-v3 white-box reveal shadow floatable blur"  itemscope itemtype="http://schema.org/Article" >
-  <link itemprop="mainEntityOfPage" href="https://zifengzhao.github.io/2022/10/25/Lab2_report/">
-  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="KimFang's Blog">
-  </span>
-  <span hidden itemprop="post" itemscope itemtype="http://schema.org/Post">
-    <meta itemprop="name" content="KimFang's Blog">
-    <meta itemprop="description" content="用来记录学习心得">
-  </span>
+          
+
+        
+      
+        
+          
+  <div class="new-meta-item share -mob-share-list">
+  <div class="-mob-share-list share-body">
+    
+      
+        <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://zifengzhao.github.io/2022/10/27/lab3Report/&title=Deadlock Freedom - KimFang's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qq.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=https://zifengzhao.github.io/2022/10/27/lab3Report/&title=Deadlock Freedom - KimFang's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/qzone.png">
+          
+        </a>
+      
+    
+      
+        <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
+          
+          target="_blank" href="http://service.weibo.com/share/share.php?url=https://zifengzhao.github.io/2022/10/27/lab3Report/&title=Deadlock Freedom - KimFang's Blog&summary="
+          
+          >
+          
+            <img src="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/logo/128/weibo.png">
+          
+        </a>
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+
+        
+      
+    </div>
+    <!-- Custom Files bottomMeta begin -->
+    
+    <!-- Custom Files bottomMeta end -->
+  </div>
+
+
   
   
+
   
+    <div class="prev-next">
+      
+      
+        <a class='next' href='/2022/10/25/Lab2_report/'>
+          <p class='title'>Topology Comparison<i class="fa-solid fa-chevron-right" aria-hidden="true"></i></p>
+          <p class='content'>1. 实验目的本实验比较了三种拓扑结构（Mesh; Flattened-Butterfly; hierarchical ring) 对NoC性能的影响。
+2. 实验原理2.1 Flattened...</p>
+        </a>
+      
+    </div>
+  
+  <!-- Custom Files postEnd begin-->
+  
+  <!-- Custom Files postEnd end-->
+</article>
+
+
+  
+
+
+  <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
+      <meta itemprop="discussionUrl" content="/2022/10/27/lab3Report/index.html#comments">
     </span>
-  
-  
+    <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
-    <h2 class="article-title"  itemprop="name headline">
-      <a href="/2022/10/25/Lab2_report/"  itemprop="url">
-        Topology Comparison
-      </a>
-    </h2>
-  
-  <div class='md article-desc' itemprop="articleBody">
-    
-      
-        1. 实验目的本实验比较了三种拓扑结构（Mesh; Flattened-Butterfly; hierarchical ring) 对NoC性能的影响。
-2. 实验原理2.1 Flattened Butterfly该拓扑结构是John Kim和James Balfour在2007年提出的Butterfly改进结构。该结构最突出的特点是高阶数(high-radix)。NoC拓扑结构的阶数指的是...
-      
-    
-  </div>
-  
-    <div class='meta-v3' line_style='solid'>
-      <div>
-        
-          
-          <a class='avatar' target="_blank" rel="noopener" href='https://github.com/ZiFengZhao.git'><img src=''></a>
-          <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-            <meta itemprop="image" content="">
-            <meta itemprop="name" content="ZiFeng Zhao">
-            <meta itemprop="url" content="https://github.com/ZiFengZhao.git">
-          </span>
-        
-        <time itemprop="dateCreated datePublished" datetime="2022-10-25T00:00:00+08:00">2022-10-25</time>
-        
-          <span class="dot"></span>
-          <a class="category-link" href="/categories/Computer-Architecture/">Computer Architecture</a><span class="sep"></span><a class="category-link" href="/categories/Computer-Architecture/NoC/">NoC</a>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Computer-Architecture/" itemprop="url"><span itemprop="name">Computer Architecture</span></a>
-            </span>
-          
-            <span hidden itemprop="about" itemscope itemtype="http://schema.org/Thing">
-              <a href="/categories/Computer-Architecture/NoC/" itemprop="url"><span itemprop="name">NoC</span></a>
-            </span>
-          
-        
-      </div>
-      
-        <div>
-          <a class='readmore' href='/2022/10/25/Lab2_report/' itemprop="url">
-            阅读全文
-          </a>
-        </div>
-      
-    </div>
-  
 
-</div>
+    <div id="layoutHelper-comments"></div>
 
-          </div>
-        
-      
-    
-  </section>
-  
-    
-  
+  </article>
+
+
+
+
 
 
 </div>
@@ -2467,102 +2581,48 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       
-<section class="widget blogger desktop mobile pjax">
-  <div class='content'>
     
-      
-        <a class='avatar flat-box rectangle' href='/about/'>
-          <img no-lazy src='https://s1.vika.cn/space/2022/09/08/d9fef370605a4500907cd05eaa2a05cd'/>
-        </a>
-      
-    
-    
-      <div class='text'>
-        
-          <h2>淡定哥</h2>
-        
-        
-          <p><a href="mailto:&#50;&#x32;&#x31;&#49;&#50;&#48;&#50;&#48;&#48;&#54;&#x36;&#64;&#109;&#46;&#x66;&#x75;&#100;&#97;&#x6e;&#46;&#101;&#x64;&#x75;&#46;&#99;&#110;">&#50;&#x32;&#x31;&#49;&#50;&#48;&#50;&#48;&#48;&#54;&#x36;&#64;&#109;&#46;&#x66;&#x75;&#100;&#97;&#x6e;&#46;&#101;&#x64;&#x75;&#46;&#99;&#110;</a></p>
-
-        
-        
-          <p><span id="jinrishici-sentence">KimFang's Blog</span></p>
-          <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-        
-      </div>
-    
-    
-      <div class="social-wrapper">
-        
-          
-            <a href="https://github.com/ZiFengZhao/"
-              class="social fab fa-github flat-btn"
-              target="_blank"
-              rel="external nofollow noopener noreferrer">
-              
-            </a>
-          
-        
-      </div>
-    
-  </div>
-</section>
-
-    
-  
-
-  
-    
-    
-      
-  
-  <section class="widget category desktop pjax">
-    
-  <header>
-    
-      <a href='/blog/categories/'><i class="fa-solid fa-folder-open fa-fw" aria-hidden="true"></i><span class='name'>文章分类</span></a>
-    
-  </header>
-
-
-    <div class='content'>
-      <ul class="entry navigation">
-        
-          <li><a class="flat-box"
-            title="/categories/Computer-Architecture/" href="/categories/Computer-Architecture/"
-            active-action="action-categoriesComputer-Architecture"
-            ><div class='name'>Computer Architecture</div><div class='badge'>(2)</div></a></li>
-        
-          <li><a class="flat-box child"
-            title="/categories/Computer-Architecture/NoC/" href="/categories/Computer-Architecture/NoC/"
-            active-action="action-categoriesComputer-ArchitectureNoC"
-            ><div class='name'>NoC</div><div class='badge'>(2)</div></a></li>
-        
-      </ul>
-    </div>
-  </section>
-
-
-    
-  
-
-  
-    
-    
-      
-
-    
-  
-
   
 
 
 <div class="widget-sticky pjax">
 
+  
+  
+
+
+  <section class="widget toc-wrapper desktop mobile " id="toc-div" >
+    
+  <header>
+    
+      <i class="fa-solid fa-list fa-fw" aria-hidden="true"></i><span class='name'>本文目录</span>
+    
+  </header>
+
+
+    <div class='content'>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84"><span class="toc-text">1. 实验目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%AE%9E%E9%AA%8C%E5%8E%9F%E7%90%86"><span class="toc-text">2. 实验原理</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%AE%9E%E9%AA%8C%E5%86%85%E5%AE%B9"><span class="toc-text">3. 实验内容</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E6%AD%BB%E9%94%81%E6%A3%80%E6%B5%8B"><span class="toc-text">3.1 死锁检测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-%E4%BD%BF%E7%94%A8Turn-model%E9%81%BF%E5%85%8D%E6%AD%BB%E9%94%81"><span class="toc-text">3.2 使用Turn model避免死锁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-%E4%BD%BF%E7%94%A8Escape-VC%E9%81%BF%E5%85%8D%E6%AD%BB%E9%94%81"><span class="toc-text">3.3 使用Escape VC避免死锁</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E5%AE%9E%E9%AA%8C%E8%BF%87%E7%A8%8B"><span class="toc-text">4. 实验过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E5%AE%9E%E9%AA%8C%E7%BB%93%E6%9E%9C"><span class="toc-text">5. 实验结果</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-%E6%AD%BB%E9%94%81%E6%A3%80%E6%B5%8B"><span class="toc-text">5.1 死锁检测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-%E9%81%BF%E5%85%8D%E6%AD%BB%E9%94%81"><span class="toc-text">5.2 避免死锁</span></a></li></ol></li></ol>
+    </div>
+  </section>
+
+  
+
 </div>
 
 
 <!-- 没有 pjax 占位会报错 万恶的 pjax -->
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
+
+  <div class="pjax">
+    <!-- pjax占位 -->
+  </div>
 
   <div class="pjax">
     <!-- pjax占位 -->
@@ -2597,7 +2657,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=false;
+  pdata.ispage=true;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -2606,15 +2666,15 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     // header
     var l_header=document.getElementById("l_header");
     
-    l_header.classList.remove("show");
+    l_header.classList.add("show");
     
     
       // cover
       var cover_wrapper=document.querySelector('#l_cover .cover-wrapper');
       var scroll_down=document.getElementById('scroll-down');
-      cover_wrapper.id="full";
-      cover_wrapper.style.display="";
-      scroll_down.style.display="";
+      cover_wrapper.id="none";
+      cover_wrapper.style.display="none";
+      scroll_down.style.display="none";
     
   
 </script>
@@ -2996,6 +3056,77 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <!-- pjax 标签必须存在于所有页面 否则 pjax error -->
 <pjax>
 
+        <script>
+  // https://github.com/theme-next/hexo-theme-next/blob/master/layout/_third-party/math/mathjax.swig
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = "https://unpkg.com/volantis-static@0.0.1654736714924/libs/mathjax/es5/tex-mml-chtml.js";
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    // 文章章节标题不能为 “MathJax” ，否则会报错。
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typesetPromise();
+  }
+</script>
+
+        <style>
+  #post-body p {
+    text-indent: 2em;
+  }
+  #post-body .new-meta-box p,
+  #post-body .note p,
+  #post-body .prev-next p,
+  #post-body .tag p,
+  #post-body blockquote p,
+  #post-body details p,
+  #post-body p.p,
+  #post-body .tab-pane .checkbox
+  #post-body section p {
+    text-indent: initial;
+  }
+</style>
+
+
+
 </pjax>
 
 <script>
@@ -3127,7 +3258,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/","sameAs":["https://github.com/volantis-x"],"description":"用来记录学习心得"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://ZiFengZhao.github.io/","name":"KimFang's Blog"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","keywords":"Computer Architecture, Network on Chip(NoC)","description":"用来记录学习心得","author":{"@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/","description":"用来记录学习心得"},"publisher":{"@type":"Organization","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://ZiFengZhao.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","description":"用来记录学习心得","inLanguage":["zh-CN","en","default"],"mainEntityOfPage":{"@type":"WebPage"},"author":{"@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/"},"publisher":{"@type":"Organization","name":"KimFang's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"wordCount":0,"image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/","sameAs":["https://github.com/volantis-x"],"description":"用来记录学习心得"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"https://ZiFengZhao.github.io/","name":"KimFang's Blog"}},{"@type":"ListItem","position":2,"item":{"@id":"https://ZiFengZhao.github.io/categories/Computer-Architecture/","name":"Computer Architecture"}},{"@type":"ListItem","position":2,"item":{"@id":"https://ZiFengZhao.github.io/categories/Computer-Architecture/NoC/","name":"NoC"}},{"@type":"ListItem","position":3,"item":{"@id":"https://ZiFengZhao.github.io/2022/10/27/lab3Report/","name":"Deadlock Freedom"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","keywords":"Computer Architecture, Network on Chip(NoC)","description":"用来记录学习心得","author":{"@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/","description":"用来记录学习心得"},"publisher":{"@type":"Organization","name":"KimFang's Blog","url":"https://ZiFengZhao.github.io/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"https://ZiFengZhao.github.io?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"Deadlock Freedom","description":"用来记录学习心得","inLanguage":["zh-CN","en","default"],"mainEntityOfPage":{"@type":"WebPage","@id":"https://zifengzhao.github.io/2022/10/27/lab3Report/"},"author":{"@type":"Person","name":"ZiFeng Zhao","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"https://ZiFengZhao.github.io/"},"publisher":{"@type":"Organization","name":"KimFang's Blog","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"https://zifengzhao.github.io/2022/10/27/lab3Report/","wordCount":0,"datePublished":"2022-10-26T16:00:00.000Z","dateModified":"2022-10-27T13:22:24.351Z","articleSection":"Computer Architecture","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
